@@ -1,0 +1,1670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns7="http://Main.Classi.siap.com" xmlns:impl="http://Servizi.Crm.APWebServices" xmlns:tns3="http://Tabelle.Crm.APClassi" xmlns:tns2="http://Tabelle.APClassi" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns4="http://Anagrafiche.Crm.APClassi" xmlns:tns10="http://DettagliOperativi.Crm.APClassi" xmlns:tns11="http://Reclami.Crm.APClassi" xmlns:tns8="http://Azioni.Crm.APClassi" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:tns1="http://Strutture.WebServices.siap.com" xmlns:tns6="http://TipiRecord.APClassi" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns5="http://Strutture.Crm.APWebServices" xmlns:tns9="http://Documenti.Crm.APClassi" xmlns:intf="http://Servizi.Crm.APWebServices" targetNamespace="http://Servizi.Crm.APWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.WebServices.siap.com">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructLogin">
+        <xsd:sequence>
+          <xsd:element name="password" nillable="true" type="xsd:string" />
+          <xsd:element name="utente" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructEsito">
+        <xsd:sequence>
+          <xsd:element name="messaggio" nillable="true" type="xsd:string" />
+          <xsd:element name="stato" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Tabelle.APClassi">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructTabella">
+        <xsd:sequence>
+          <xsd:element name="codice" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructTabellaOut">
+        <xsd:sequence>
+          <xsd:element name="VElementi" nillable="true" type="intf:ArrayOf_tns2_StructTabella" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Servizi.Crm.APWebServices">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_tns2_StructTabella">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns2:StructTabella[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns3_StructPreferenze">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns3:StructPreferenze[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaPreferenze">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaPreferenze[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns3_StructConvenzione">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns3:StructConvenzione[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaClienti">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaClienti[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaGiocata">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaGiocata[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns3_StructSottoscrizioni">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns3:StructSottoscrizioni[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaGeneraleSog">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaGeneraleSog[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns5_StructRisultatoRicercaAnaOut">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns5:StructRisultatoRicercaAnaOut[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns8_StructCrmAzione">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns8:StructCrmAzione[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaConvenzioni">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaConvenzioni[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns9_StructCrmAnaDocMult">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns9:StructCrmAnaDocMult[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns9_StructCrmAnaMovimentoPunti">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns9:StructCrmAnaMovimentoPunti[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns9_StructCrmAnaDocPers">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns9:StructCrmAnaDocPers[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns3_StructCampo">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns3:StructCampo[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaEstensioni">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaEstensioni[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaRecapiti">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaRecapiti[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaReferenti">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaReferenti[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaQuestionari">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaQuestionari[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns4_StructCrmAnaViaggiRecenti">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns4:StructCrmAnaViaggiRecenti[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns10_StructCrmServizioDettOperativi">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns10:StructCrmServizioDettOperativi[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns11_StructCrmAnaReclamoAllegato">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns11:StructCrmAnaReclamoAllegato[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns11_StructCrmAnaReclamo">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns11:StructCrmAnaReclamo[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Tabelle.Crm.APClassi">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructPreferenze">
+        <xsd:sequence>
+          <xsd:element name="checked" nillable="true" type="xsd:string" />
+          <xsd:element name="codice" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructTipiPreferenze">
+        <xsd:sequence>
+          <xsd:element name="codice" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+          <xsd:element name="videataRidotta" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructPreferenzeOut">
+        <xsd:sequence>
+          <xsd:element name="VPreferenze" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaPreferenze" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructConvenzione">
+        <xsd:sequence>
+          <xsd:element name="codice" nillable="true" type="xsd:string" />
+          <xsd:element name="dataValiditaFinale" nillable="true" type="xsd:string" />
+          <xsd:element name="dataValiditaIniziale" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+          <xsd:element name="stato" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructConvenzioniOut">
+        <xsd:sequence>
+          <xsd:element name="VConvenzioni" nillable="true" type="intf:ArrayOf_tns3_StructConvenzione" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructSottoscrizioni">
+        <xsd:sequence>
+          <xsd:element name="VGiocate" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaGiocata" />
+          <xsd:element name="checked" nillable="true" type="xsd:string" />
+          <xsd:element name="codice" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCampo">
+        <xsd:sequence>
+          <xsd:element name="decimali" type="xsd:int" />
+          <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+          <xsd:element name="flgObb" nillable="true" type="xsd:string" />
+          <xsd:element name="helpContestuale" nillable="true" type="xsd:string" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+          <xsd:element name="label" nillable="true" type="xsd:string" />
+          <xsd:element name="lunghezza" type="xsd:int" />
+          <xsd:element name="risposte" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoDato" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoInput" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoRaggruppamento" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoVisualizzazione" nillable="true" type="xsd:string" />
+          <xsd:element name="valoriIniziali" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Anagrafiche.Crm.APClassi">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructCrmAnaPreferenze">
+        <xsd:sequence>
+          <xsd:element name="VOpzioni" nillable="true" type="intf:ArrayOf_tns3_StructPreferenze" />
+          <xsd:element name="tipologia" nillable="true" type="tns3:StructTipiPreferenze" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaGeneraleRidotta">
+        <xsd:sequence>
+          <xsd:element name="agenziaDittaPrivato" nillable="true" type="xsd:string" />
+          <xsd:element name="cap" nillable="true" type="xsd:string" />
+          <xsd:element name="categoria" nillable="true" type="xsd:string" />
+          <xsd:element name="citta" nillable="true" type="xsd:string" />
+          <xsd:element name="codNazione" nillable="true" type="xsd:string" />
+          <xsd:element name="codProvincia" nillable="true" type="xsd:string" />
+          <xsd:element name="codRegione" nillable="true" type="xsd:string" />
+          <xsd:element name="codStato" nillable="true" type="xsd:string" />
+          <xsd:element name="codiceFiscale" nillable="true" type="xsd:string" />
+          <xsd:element name="cognome" nillable="true" type="xsd:string" />
+          <xsd:element name="indirizzo" nillable="true" type="xsd:string" />
+          <xsd:element name="nome" nillable="true" type="xsd:string" />
+          <xsd:element name="partitaIva" nillable="true" type="xsd:string" />
+          <xsd:element name="ragioneSociale" nillable="true" type="xsd:string" />
+          <xsd:element name="sesso" nillable="true" type="xsd:string" />
+          <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaGenerale">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns4:StructCrmAnaGeneraleRidotta">
+            <xsd:sequence>
+              <xsd:element name="catMerceol" nillable="true" type="xsd:string" />
+              <xsd:element name="codGruppo" nillable="true" type="xsd:string" />
+              <xsd:element name="codNotePersona" nillable="true" type="xsd:string" />
+              <xsd:element name="codProfessione" nillable="true" type="xsd:string" />
+              <xsd:element name="codStatoOperativo" nillable="true" type="xsd:string" />
+              <xsd:element name="codTitolo" nillable="true" type="xsd:string" />
+              <xsd:element name="codTitoloStudio" nillable="true" type="xsd:string" />
+              <xsd:element name="consensoPrivacyElettronicaEmail" nillable="true" type="xsd:string" />
+              <xsd:element name="consensoPrivacyMateriale" nillable="true" type="xsd:string" />
+              <xsd:element name="consensoPrivacySensibiliTerzi" nillable="true" type="xsd:string" />
+              <xsd:element name="consensoPrivacyServizi" nillable="true" type="xsd:string" />
+              <xsd:element name="consensoPrivacyTerzi" nillable="true" type="xsd:string" />
+              <xsd:element name="dataNascita" nillable="true" type="xsd:string" />
+              <xsd:element name="informazioniAggiuntive" nillable="true" type="xsd:string" />
+              <xsd:element name="luogoNascita" nillable="true" type="xsd:string" />
+              <xsd:element name="personaFisica" nillable="true" type="xsd:string" />
+              <xsd:element name="sottoCatMerceol" nillable="true" type="xsd:string" />
+              <xsd:element name="statoCivile" nillable="true" type="xsd:string" />
+              <xsd:element name="unitaOperativa" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaClienti">
+        <xsd:sequence>
+          <xsd:element name="codCliente" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaGiocata">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns6:AWCMANAG">
+            <xsd:sequence>
+              <xsd:element name="codPremio" nillable="true" type="xsd:string" />
+              <xsd:element name="data" nillable="true" type="xsd:string" />
+              <xsd:element name="giocato" nillable="true" type="xsd:string" />
+              <xsd:element name="ora" nillable="true" type="xsd:string" />
+              <xsd:element name="progre" type="xsd:int" />
+              <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+              <xsd:element name="vinto" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaSottoscrizioni">
+        <xsd:sequence>
+          <xsd:element name="VOpzioni" nillable="true" type="intf:ArrayOf_tns3_StructSottoscrizioni" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaGeneraleSog">
+        <xsd:sequence>
+          <xsd:element name="tipoSoggetto" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaConvenzioni">
+        <xsd:sequence>
+          <xsd:element name="codConvenzione" nillable="true" type="xsd:string" />
+          <xsd:element name="idConvenzione" type="xsd:int" />
+          <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaEstensioni">
+        <xsd:sequence>
+          <xsd:element name="VCampi" nillable="true" type="intf:ArrayOf_tns3_StructCampo" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaRecapiti">
+        <xsd:sequence>
+          <xsd:element name="cap" nillable="true" type="xsd:string" />
+          <xsd:element name="citta" nillable="true" type="xsd:string" />
+          <xsd:element name="codNazione" nillable="true" type="xsd:string" />
+          <xsd:element name="codProvincia" nillable="true" type="xsd:string" />
+          <xsd:element name="codRecapito" nillable="true" type="xsd:string" />
+          <xsd:element name="codStato" nillable="true" type="xsd:string" />
+          <xsd:element name="consensoContatto" nillable="true" type="xsd:string" />
+          <xsd:element name="dataValiditaFi" nillable="true" type="xsd:string" />
+          <xsd:element name="dataValiditaIn" nillable="true" type="xsd:string" />
+          <xsd:element name="idRecapito" type="xsd:int" />
+          <xsd:element name="indirizzo" nillable="true" type="xsd:string" />
+          <xsd:element name="livelloAccesso" type="xsd:int" />
+          <xsd:element name="note" nillable="true" type="xsd:string" />
+          <xsd:element name="oraFinale" nillable="true" type="xsd:string" />
+          <xsd:element name="oraIniziale" nillable="true" type="xsd:string" />
+          <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+          <xsd:element name="valore" nillable="true" type="xsd:string" />
+          <xsd:element name="visibilita" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaReferenti">
+        <xsd:sequence>
+          <xsd:element name="VRecapiti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaRecapiti" />
+          <xsd:element name="codIncarico" nillable="true" type="xsd:string" />
+          <xsd:element name="codMansioneAz" nillable="true" type="xsd:string" />
+          <xsd:element name="codReparto" nillable="true" type="xsd:string" />
+          <xsd:element name="codTitoloPersona" nillable="true" type="xsd:string" />
+          <xsd:element name="idReferente" type="xsd:int" />
+          <xsd:element name="internoEsterno" nillable="true" type="xsd:string" />
+          <xsd:element name="note" nillable="true" type="xsd:string" />
+          <xsd:element name="referente" nillable="true" type="xsd:string" />
+          <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaFonti">
+        <xsd:sequence>
+          <xsd:element name="chiave" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoFonte" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaQuestionari">
+        <xsd:sequence>
+          <xsd:element name="VCampi" nillable="true" type="intf:ArrayOf_tns3_StructCampo" />
+          <xsd:element name="codSocietaApp" nillable="true" type="xsd:string" />
+          <xsd:element name="concludingSentence" nillable="true" type="xsd:string" />
+          <xsd:element name="dataValiditaFinale" nillable="true" type="xsd:string" />
+          <xsd:element name="dataValiditaIniziale" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+          <xsd:element name="finalSentence" nillable="true" type="xsd:string" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+          <xsd:element name="infoPratica" nillable="true" type="tns5:StructInfoPratica" />
+          <xsd:element name="infoPrvCommessa" nillable="true" type="tns5:StructInfoPrvCommessa" />
+          <xsd:element name="infoPrvCommessaTL" nillable="true" type="tns5:StructInfoPrvCommessaTL" />
+          <xsd:element name="infoVoucher" nillable="true" type="tns5:StructInfoVoucher" />
+          <xsd:element name="keyBiglietto" nillable="true" type="tns5:StructKeyBiglietto" />
+          <xsd:element name="keyPratica" nillable="true" type="tns5:StructKeyPratica" />
+          <xsd:element name="keyPrvCommessa" nillable="true" type="tns5:StructKeyPrvCommessa" />
+          <xsd:element name="keyVoucher" nillable="true" type="tns5:StructKeyVoucher" />
+          <xsd:element name="note" nillable="true" type="xsd:string" />
+          <xsd:element name="openingSentence" nillable="true" type="xsd:string" />
+          <xsd:element name="riferimento" nillable="true" type="xsd:string" />
+          <xsd:element name="terminato" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoLayout" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaViaggiRecenti">
+        <xsd:sequence>
+          <xsd:element name="dataRegistrazione" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+          <xsd:element name="flagIncasso" nillable="true" type="xsd:string" />
+          <xsd:element name="informazioni" nillable="true" type="xsd:string" />
+          <xsd:element name="stato" nillable="true" type="xsd:string" />
+          <xsd:element name="strImporto1" nillable="true" type="xsd:string" />
+          <xsd:element name="strImporto2" nillable="true" type="xsd:string" />
+          <xsd:element name="strNumeroDocumento" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoDocumento" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoItinerario" nillable="true" type="xsd:string" />
+          <xsd:element name="unitaOperativa" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.Crm.APWebServices">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructParamRicercaAnaCrm">
+        <xsd:sequence>
+          <xsd:element name="campiOrdinamento" nillable="true" type="xsd:string" />
+          <xsd:element name="citta" nillable="true" type="xsd:string" />
+          <xsd:element name="codFis" nillable="true" type="xsd:string" />
+          <xsd:element name="codKeyAgente" nillable="true" type="xsd:string" />
+          <xsd:element name="codKeyUnitaOp" nillable="true" type="xsd:string" />
+          <xsd:element name="codStatoOperativo" nillable="true" type="xsd:string" />
+          <xsd:element name="cognome" nillable="true" type="xsd:string" />
+          <xsd:element name="conto" nillable="true" type="xsd:string" />
+          <xsd:element name="gruppo" nillable="true" type="xsd:string" />
+          <xsd:element name="gruppoA" nillable="true" type="xsd:string" />
+          <xsd:element name="indiceFinale" type="xsd:int" />
+          <xsd:element name="indiceIniziale" type="xsd:int" />
+          <xsd:element name="indirizzo" nillable="true" type="xsd:string" />
+          <xsd:element name="mastro" nillable="true" type="xsd:string" />
+          <xsd:element name="nome" nillable="true" type="xsd:string" />
+          <xsd:element name="nominativo" nillable="true" type="xsd:string" />
+          <xsd:element name="persFis" nillable="true" type="xsd:string" />
+          <xsd:element name="piva" nillable="true" type="xsd:string" />
+          <xsd:element name="provincia" nillable="true" type="xsd:string" />
+          <xsd:element name="ragSocBreve" nillable="true" type="xsd:string" />
+          <xsd:element name="soggetto" nillable="true" type="xsd:string" />
+          <xsd:element name="sottoConto" nillable="true" type="xsd:string" />
+          <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoOrdinamento" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoPersona" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoRecapito" nillable="true" type="xsd:string" />
+          <xsd:element name="valRecapito" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructExportAnaOut">
+        <xsd:sequence>
+          <xsd:element name="contentBase64" nillable="true" type="xsd:string" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+          <xsd:element name="numTotAna" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructRisultatoRicercaAnaOut">
+        <xsd:sequence>
+          <xsd:element name="anaGenerale" nillable="true" type="tns4:StructCrmAnaGenerale" />
+          <xsd:element name="cel" nillable="true" type="xsd:string" />
+          <xsd:element name="idAnagrafica" type="xsd:int" />
+          <xsd:element name="mail" nillable="true" type="xsd:string" />
+          <xsd:element name="out_Clienti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaClienti" />
+          <xsd:element name="sottoscrizioni" nillable="true" type="tns4:StructCrmAnaSottoscrizioni" />
+          <xsd:element name="tel" nillable="true" type="xsd:string" />
+          <xsd:element name="vSoggetti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaGeneraleSog" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructRisultatiRicercaAnaOut">
+        <xsd:sequence>
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+          <xsd:element name="numTotAna" type="xsd:int" />
+          <xsd:element name="risultati" nillable="true" type="intf:ArrayOf_tns5_StructRisultatoRicercaAnaOut" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyAnaContatto">
+        <xsd:sequence>
+          <xsd:element name="chiave" nillable="true" type="xsd:string" />
+          <xsd:element name="codAccessoSiap" nillable="true" type="xsd:string" />
+          <xsd:element name="codFiscale" nillable="true" type="xsd:string" />
+          <xsd:element name="partitaIva" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoFonte" nillable="true" type="xsd:string" />
+          <xsd:element name="userIdSiap" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAzioni">
+        <xsd:sequence>
+          <xsd:element name="gestioneAzioni" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaCredenziali">
+        <xsd:sequence>
+          <xsd:element name="codAccessoSiap" nillable="true" type="xsd:string" />
+          <xsd:element name="newCodAccessoSiap" nillable="true" type="xsd:string" />
+          <xsd:element name="newUserIdSiap" nillable="true" type="xsd:string" />
+          <xsd:element name="userIdSiap" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaContatto">
+        <xsd:sequence>
+          <xsd:element name="VAzioni" nillable="true" type="intf:ArrayOf_tns8_StructCrmAzione" />
+          <xsd:element name="VClienti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaClienti" />
+          <xsd:element name="VConvenzioni" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaConvenzioni" />
+          <xsd:element name="VDocumentiMultimediali" nillable="true" type="intf:ArrayOf_tns9_StructCrmAnaDocMult" />
+          <xsd:element name="VDocumentiPersonali" nillable="true" type="intf:ArrayOf_tns9_StructCrmAnaDocPers" />
+          <xsd:element name="VEstensioni" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaEstensioni" />
+          <xsd:element name="VPreferenze" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaPreferenze" />
+          <xsd:element name="VRecapiti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaRecapiti" />
+          <xsd:element name="VReferenti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaReferenti" />
+          <xsd:element name="VSoggetti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaGeneraleSog" />
+          <xsd:element name="anaGenerale" nillable="true" type="tns4:StructCrmAnaGenerale" />
+          <xsd:element name="credenziali" nillable="true" type="tns5:StructCrmAnaCredenziali" />
+          <xsd:element name="fonte" nillable="true" type="tns4:StructCrmAnaFonti" />
+          <xsd:element name="sottoscrizioni" nillable="true" type="tns4:StructCrmAnaSottoscrizioni" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaContattoOut">
+        <xsd:sequence>
+          <xsd:element name="anaContatto" nillable="true" type="tns5:StructAnaContatto" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyUnsubscribe">
+        <xsd:sequence>
+          <xsd:element name="criptedUnsubscribe" nillable="true" type="xsd:string" />
+          <xsd:element name="inviaEmailUnsubscribe" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyRecuperoPassword">
+        <xsd:sequence>
+          <xsd:element name="userIdSiap" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaCredenzialiOut">
+        <xsd:sequence>
+          <xsd:element name="credenziali" nillable="true" type="tns5:StructCrmAnaCredenziali" />
+          <xsd:element name="email" nillable="true" type="xsd:string" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyBiglietto">
+        <xsd:sequence>
+          <xsd:element name="codice" nillable="true" type="xsd:string" />
+          <xsd:element name="numero" type="xsd:long" />
+          <xsd:element name="serie" nillable="true" type="xsd:string" />
+          <xsd:element name="unita" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyPratica">
+        <xsd:sequence>
+          <xsd:element name="anno" type="xsd:int" />
+          <xsd:element name="numero" type="xsd:int" />
+          <xsd:element name="tipo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyPrvCommessa">
+        <xsd:sequence>
+          <xsd:element name="idPrvCommessa" type="xsd:long" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyVoucher">
+        <xsd:sequence>
+          <xsd:element name="anno" type="xsd:int" />
+          <xsd:element name="numero" type="xsd:int" />
+          <xsd:element name="tipo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyAnaQuestionario">
+        <xsd:sequence>
+          <xsd:element name="codSocietaApp" nillable="true" type="xsd:string" />
+          <xsd:element name="id" nillable="true" type="xsd:string" />
+          <xsd:element name="keyAnaContatto" nillable="true" type="tns5:StructKeyAnaContatto" />
+          <xsd:element name="keyBiglietto" nillable="true" type="tns5:StructKeyBiglietto" />
+          <xsd:element name="keyPratica" nillable="true" type="tns5:StructKeyPratica" />
+          <xsd:element name="keyPrvCommessa" nillable="true" type="tns5:StructKeyPrvCommessa" />
+          <xsd:element name="keyVoucher" nillable="true" type="tns5:StructKeyVoucher" />
+          <xsd:element name="riferimento" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructInfoPratica">
+        <xsd:sequence>
+          <xsd:element name="dataFineViaggio" nillable="true" type="xsd:string" />
+          <xsd:element name="dataInizioViaggio" nillable="true" type="xsd:string" />
+          <xsd:element name="desViaggio" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructInfoPrvCommessaBase">
+        <xsd:sequence>
+          <xsd:element name="annoCommessa" nillable="true" type="xsd:string" />
+          <xsd:element name="azienda" nillable="true" type="xsd:string" />
+          <xsd:element name="dataEffettuazioneEvento" nillable="true" type="xsd:string" />
+          <xsd:element name="destinazione" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroCommessa" nillable="true" type="xsd:string" />
+          <xsd:element name="opeOperativo" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructInfoPrvCommessa">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns5:StructInfoPrvCommessaBase">
+            <xsd:sequence>
+              <xsd:element name="accountRiferimento" nillable="true" type="xsd:string" />
+              <xsd:element name="arrayStaffInEvento" nillable="true" type="intf:ArrayOf_xsd_string" />
+              <xsd:element name="opeProgrammazione" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructInfoPrvCommessaTL">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns5:StructInfoPrvCommessaBase">
+            <xsd:sequence>
+              <xsd:element name="arrayTourLeader" nillable="true" type="intf:ArrayOf_xsd_string" />
+              <xsd:element name="hotelTourOperator" nillable="true" type="xsd:string" />
+              <xsd:element name="idCommessa" nillable="true" type="xsd:string" />
+              <xsd:element name="nomeEvento" nillable="true" type="xsd:string" />
+              <xsd:element name="numPersone" type="xsd:int" />
+              <xsd:element name="numTourLeader" type="xsd:int" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructInfoVoucher">
+        <xsd:sequence>
+          <xsd:element name="codHotel" nillable="true" type="xsd:string" />
+          <xsd:element name="dataIn" nillable="true" type="xsd:string" />
+          <xsd:element name="dataOut" nillable="true" type="xsd:string" />
+          <xsd:element name="localitaHotel" nillable="true" type="xsd:string" />
+          <xsd:element name="ragioneSocialeHotel" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaQuestionariOut">
+        <xsd:sequence>
+          <xsd:element name="VQuestionari" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaQuestionari" />
+          <xsd:element name="anaGeneraleRidotta" nillable="true" type="tns4:StructCrmAnaGeneraleRidotta" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaQuestionari">
+        <xsd:sequence>
+          <xsd:element name="VQuestionari" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaQuestionari" />
+          <xsd:element name="keyAnaContatto" nillable="true" type="tns5:StructKeyAnaContatto" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructQuestionarioOut">
+        <xsd:sequence>
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+          <xsd:element name="questionario" nillable="true" type="tns4:StructCrmAnaQuestionari" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyAnaViaggiRecenti">
+        <xsd:sequence>
+          <xsd:element name="IKeyAnaContatto" nillable="true" type="tns5:StructKeyAnaContatto" />
+          <xsd:element name="IRicercaMultiplaSocieta" nillable="true" type="xsd:string" />
+          <xsd:element name="ITipoRicerca" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructFatturato">
+        <xsd:sequence>
+          <xsd:element name="dataFine" nillable="true" type="xsd:string" />
+          <xsd:element name="dataInizio" nillable="true" type="xsd:string" />
+          <xsd:element name="importo" type="xsd:double" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaViaggiRecentiOut">
+        <xsd:sequence>
+          <xsd:element name="VViaggiRecenti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaViaggiRecenti" />
+          <xsd:element name="anaGeneraleRidotta" nillable="true" type="tns4:StructCrmAnaGeneraleRidotta" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+          <xsd:element name="media" type="xsd:double" />
+          <xsd:element name="totFatturatoAdOggiAnnoCorrente" nillable="true" type="tns5:StructFatturato" />
+          <xsd:element name="totFatturatoAdOggiAnnoPrecedente" nillable="true" type="tns5:StructFatturato" />
+          <xsd:element name="totFatturatoAnnoPrecedente" nillable="true" type="tns5:StructFatturato" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyAnaDettagliOperativi">
+        <xsd:sequence>
+          <xsd:element name="keyAnaContatto" nillable="true" type="tns5:StructKeyAnaContatto" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaDettagliOperativiOut">
+        <xsd:sequence>
+          <xsd:element name="anaDettOperativi" nillable="true" type="tns10:StructCrmAnaDettOperativi" />
+          <xsd:element name="anaGeneraleRidotta" nillable="true" type="tns4:StructCrmAnaGeneraleRidotta" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaDettagliOperativi">
+        <xsd:sequence>
+          <xsd:element name="crmAnaDettOperativi" nillable="true" type="tns10:StructCrmAnaDettOperativi" />
+          <xsd:element name="keyAnaContatto" nillable="true" type="tns5:StructKeyAnaContatto" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaReclami">
+        <xsd:sequence>
+          <xsd:element name="VReclami" nillable="true" type="intf:ArrayOf_tns11_StructCrmAnaReclamo" />
+          <xsd:element name="keyAnaContatto" nillable="true" type="tns5:StructKeyAnaContatto" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructKeyAnaReclami">
+        <xsd:sequence>
+          <xsd:element name="idReclamo" type="xsd:int" />
+          <xsd:element name="keyAnaContatto" nillable="true" type="tns5:StructKeyAnaContatto" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaReclamiOut">
+        <xsd:sequence>
+          <xsd:element name="VReclami" nillable="true" type="intf:ArrayOf_tns11_StructCrmAnaReclamo" />
+          <xsd:element name="anaGeneraleRidotta" nillable="true" type="tns4:StructCrmAnaGeneraleRidotta" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaContattoRidotta">
+        <xsd:sequence>
+          <xsd:element name="anaGenerale" nillable="true" type="tns4:StructCrmAnaGenerale" />
+          <xsd:element name="credenziali" nillable="true" type="tns5:StructCrmAnaCredenziali" />
+          <xsd:element name="fonte" nillable="true" type="tns4:StructCrmAnaFonti" />
+          <xsd:element name="sottoscrizioni" nillable="true" type="tns4:StructCrmAnaSottoscrizioni" />
+          <xsd:element name="vRecapiti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaRecapiti" />
+          <xsd:element name="vSoggetti" nillable="true" type="intf:ArrayOf_tns4_StructCrmAnaGeneraleSog" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructPrimaryKeyAnaContatto">
+        <xsd:sequence>
+          <xsd:element name="chiave" nillable="true" type="xsd:string" />
+          <xsd:element name="codAccessoSiap" nillable="true" type="xsd:string" />
+          <xsd:element name="idAnaCrm" type="xsd:int" />
+          <xsd:element name="tipoFonte" nillable="true" type="xsd:string" />
+          <xsd:element name="userIdSiap" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Main.Classi.siap.com">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="SiapCommonClass">
+        <xsd:sequence />
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://TipiRecord.APClassi">
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="AWCMANAG">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns7:SiapCommonClass">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AWCMANAM">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns7:SiapCommonClass">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AWCMANVS">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns7:SiapCommonClass">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AWCMANAV">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns7:SiapCommonClass">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Azioni.Crm.APClassi">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructCrmAzione">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns7:SiapCommonClass">
+            <xsd:sequence>
+              <xsd:element name="codGruOpeNotificaAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="codGruOpeNotificaAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="codOpeAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="codOpeAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="codOpeCreaz" nillable="true" type="xsd:string" />
+              <xsd:element name="codOpeNotificaAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="codOpeNotificaAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="codTipoApAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="codTipoApAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="dataAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="dataAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="dataCreaz" nillable="true" type="xsd:string" />
+              <xsd:element name="dataProgrammataAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="dataProgrammataAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="desRiferimento" nillable="true" type="xsd:string" />
+              <xsd:element name="descAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="descAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="emailNotificaAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="emailNotificaAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="flagNotificaAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="flagNotificaAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="flagTipoNotificaAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="idAzione" type="xsd:int" />
+              <xsd:element name="oraAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="oraAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="oraCreaz" nillable="true" type="xsd:string" />
+              <xsd:element name="oraProgrammataAzEseguita" nillable="true" type="xsd:string" />
+              <xsd:element name="oraProgrammataAzSuccessiva" nillable="true" type="xsd:string" />
+              <xsd:element name="sottoAzioneL1" type="xsd:int" />
+              <xsd:element name="sottoAzioneL2" type="xsd:int" />
+              <xsd:element name="sottoAzioneL3" type="xsd:int" />
+              <xsd:element name="sottoAzioneL4" type="xsd:int" />
+              <xsd:element name="stato" nillable="true" type="xsd:string" />
+              <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+              <xsd:element name="tipo" nillable="true" type="xsd:string" />
+              <xsd:element name="tipoRiferimento" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Documenti.Crm.APClassi">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructCrmAnaDocMult">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns6:AWCMANAM">
+            <xsd:sequence>
+              <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+              <xsd:element name="file" nillable="true" type="xsd:base64Binary" />
+              <xsd:element name="nome" nillable="true" type="xsd:string" />
+              <xsd:element name="stato" nillable="true" type="xsd:string" />
+              <xsd:element name="tipo" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaMovimentoPunti">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns7:SiapCommonClass">
+            <xsd:sequence>
+              <xsd:element name="codCausale" nillable="true" type="xsd:string" />
+              <xsd:element name="noteInterne" nillable="true" type="xsd:string" />
+              <xsd:element name="progre" type="xsd:int" />
+              <xsd:element name="punti" type="xsd:int" />
+              <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaDocPers">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns7:SiapCommonClass">
+            <xsd:sequence>
+              <xsd:element name="VMovimenti" nillable="true" type="intf:ArrayOf_tns9_StructCrmAnaMovimentoPunti" />
+              <xsd:element name="altriDati" nillable="true" type="xsd:string" />
+              <xsd:element name="codCittadinanza" nillable="true" type="xsd:string" />
+              <xsd:element name="codStatoOperativo" nillable="true" type="xsd:string" />
+              <xsd:element name="dataRilascio" nillable="true" type="xsd:string" />
+              <xsd:element name="dataRinnovo" nillable="true" type="xsd:string" />
+              <xsd:element name="dataScadenza" nillable="true" type="xsd:string" />
+              <xsd:element name="enteRilascio" nillable="true" type="xsd:string" />
+              <xsd:element name="numero" nillable="true" type="xsd:string" />
+              <xsd:element name="progre" type="xsd:int" />
+              <xsd:element name="stato" nillable="true" type="xsd:string" />
+              <xsd:element name="tipo" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://DettagliOperativi.Crm.APClassi">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructCrmServizioDettOperativi">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns6:AWCMANVS">
+            <xsd:sequence>
+              <xsd:element name="checked" nillable="true" type="xsd:string" />
+              <xsd:element name="codice" nillable="true" type="xsd:string" />
+              <xsd:element name="descrizione" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmTestataDettOperativi">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns6:AWCMANAV">
+            <xsd:sequence>
+              <xsd:element name="accountManagerRiferimento" nillable="true" type="tns4:StructCrmAnaReferenti" />
+              <xsd:element name="codTeamLavoro" nillable="true" type="xsd:string" />
+              <xsd:element name="dataGoLive" nillable="true" type="xsd:string" />
+              <xsd:element name="emailDedicato" nillable="true" type="xsd:string" />
+              <xsd:element name="faxAssegnato" nillable="true" type="xsd:string" />
+              <xsd:element name="flagGlobalAccountManager" nillable="true" type="xsd:string" />
+              <xsd:element name="salesManagerRiferimento" nillable="true" type="tns4:StructCrmAnaReferenti" />
+              <xsd:element name="telefonoDedicato" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaDettOperativi">
+        <xsd:sequence>
+          <xsd:element name="VCrmAnaDocMult" nillable="true" type="intf:ArrayOf_tns9_StructCrmAnaDocMult" />
+          <xsd:element name="VCrmServiziDettOperativi" nillable="true" type="intf:ArrayOf_tns10_StructCrmServizioDettOperativi" />
+          <xsd:element name="structCrmTestataDettOperativi" nillable="true" type="tns10:StructCrmTestataDettOperativi" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Reclami.Crm.APClassi">
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructCrmAnaReclamoAllegato">
+        <xsd:sequence>
+          <xsd:element name="file" nillable="true" type="xsd:base64Binary" />
+          <xsd:element name="nome" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructCrmAnaReclamo">
+        <xsd:sequence>
+          <xsd:element name="VFile" nillable="true" type="intf:ArrayOf_tns11_StructCrmAnaReclamoAllegato" />
+          <xsd:element name="codFornitore" nillable="true" type="xsd:string" />
+          <xsd:element name="codOperatore" nillable="true" type="xsd:string" />
+          <xsd:element name="codSocietaPertinenza" nillable="true" type="xsd:string" />
+          <xsd:element name="codUnitaOperativa" nillable="true" type="xsd:string" />
+          <xsd:element name="dataApertura" nillable="true" type="xsd:string" />
+          <xsd:element name="dataUltimoCambioStato" nillable="true" type="xsd:string" />
+          <xsd:element name="desFornitore" nillable="true" type="xsd:string" />
+          <xsd:element name="desLiberaFornitore" nillable="true" type="xsd:string" />
+          <xsd:element name="dettaglio" nillable="true" type="xsd:string" />
+          <xsd:element name="gravita" nillable="true" type="xsd:string" />
+          <xsd:element name="idReclamo" type="xsd:int" />
+          <xsd:element name="idRiferimento" nillable="true" type="xsd:string" />
+          <xsd:element name="keyBiglietto" nillable="true" type="tns5:StructKeyBiglietto" />
+          <xsd:element name="keyPratica" nillable="true" type="tns5:StructKeyPratica" />
+          <xsd:element name="keyVoucher" nillable="true" type="tns5:StructKeyVoucher" />
+          <xsd:element name="note" nillable="true" type="xsd:string" />
+          <xsd:element name="oggetto" nillable="true" type="xsd:string" />
+          <xsd:element name="stato" nillable="true" type="xsd:string" />
+          <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+          <xsd:element name="tipo" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoRiferimento" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="unsubscribeResponse">
+    <wsdl:part name="unsubscribeReturn" type="tns1:StructEsito" />
+  </wsdl:message>
+  <wsdl:message name="elencoTipiSoggettoResponse">
+    <wsdl:part name="elencoTipiSoggettoReturn" type="tns2:StructTabellaOut" />
+  </wsdl:message>
+  <wsdl:message name="elencoCategorieMerceologicheResponse">
+    <wsdl:part name="elencoCategorieMerceologicheReturn" type="tns2:StructTabellaOut" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneAnagraficaContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iKeyAnaContatto" type="tns5:StructKeyAnaContatto" />
+    <wsdl:part name="iAzioni" type="tns5:StructAzioni" />
+  </wsdl:message>
+  <wsdl:message name="cancellazioneAnagraficaContattoResponse">
+    <wsdl:part name="cancellazioneAnagraficaContattoReturn" type="tns1:StructEsito" />
+  </wsdl:message>
+  <wsdl:message name="elencoPreferenzeResponse">
+    <wsdl:part name="elencoPreferenzeReturn" type="tns3:StructPreferenzeOut" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneAnagraficaContattoConConvenzioneRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iKeyAnaContatto" type="tns5:StructKeyAnaContatto" />
+    <wsdl:part name="iConvenzione" type="xsd:string" />
+    <wsdl:part name="iAzione" type="xsd:string" />
+    <wsdl:part name="iAzioni" type="tns5:StructAzioni" />
+  </wsdl:message>
+  <wsdl:message name="elencoConvenzioniResponse">
+    <wsdl:part name="elencoConvenzioniReturn" type="tns3:StructConvenzioniOut" />
+  </wsdl:message>
+  <wsdl:message name="elencoNazioniResponse">
+    <wsdl:part name="elencoNazioniReturn" type="tns2:StructTabellaOut" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneDettagliOperativiContattoResponse">
+    <wsdl:part name="interrogazioneDettagliOperativiContattoReturn" type="tns5:StructAnaDettagliOperativiOut" />
+  </wsdl:message>
+  <wsdl:message name="iscrizioneNewsletterResponse">
+    <wsdl:part name="iscrizioneNewsletterReturn" type="tns1:StructEsito" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneQuestionarioResponse">
+    <wsdl:part name="interrogazioneQuestionarioReturn" type="tns5:StructQuestionarioOut" />
+  </wsdl:message>
+  <wsdl:message name="elencoCategorieMerceologicheRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="elencoTipiSoggettoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="elencoMansioniAziendaliRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="elencoSottoscrizioniRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="elencoProvinceResponse">
+    <wsdl:part name="elencoProvinceReturn" type="tns2:StructTabellaOut" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoAnagraficaContattoConConvenzioneResponse">
+    <wsdl:part name="aggiornamentoAnagraficaContattoConConvenzioneReturn" type="tns5:StructAnaContattoOut" />
+  </wsdl:message>
+  <wsdl:message name="elencoMansioniAziendaliResponse">
+    <wsdl:part name="elencoMansioniAziendaliReturn" type="tns2:StructTabellaOut" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneQuestionarioRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iIdQuestionario" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="elencoProfessioniResponse">
+    <wsdl:part name="elencoProfessioniReturn" type="tns2:StructTabellaOut" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneAnagraficaContattoConConvenzioneResponse">
+    <wsdl:part name="interrogazioneAnagraficaContattoConConvenzioneReturn" type="tns5:StructAnaContattoOut" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneViaggiRecentiContattoResponse">
+    <wsdl:part name="interrogazioneViaggiRecentiContattoReturn" type="tns5:StructAnaViaggiRecentiOut" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoReclamiContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iAnaReclami" type="tns5:StructAnaReclami" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoQuestionariContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iAnaQuestionari" type="tns5:StructAnaQuestionari" />
+  </wsdl:message>
+  <wsdl:message name="exportAnagraficheCRMResponse">
+    <wsdl:part name="exportAnagraficheCRMReturn" type="tns5:StructExportAnaOut" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoAnagraficaContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iAnaContatto" type="tns5:StructAnaContatto" />
+    <wsdl:part name="iControllo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="recuperoPasswordContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iKeyRecuperoPassword" type="tns5:StructKeyRecuperoPassword" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneReclamiContattoResponse">
+    <wsdl:part name="interrogazioneReclamiContattoReturn" type="tns5:StructAnaReclamiOut" />
+  </wsdl:message>
+  <wsdl:message name="iscrizioneNewsletterRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iStructAnaContattoRidotta" type="tns5:StructAnaContattoRidotta" />
+    <wsdl:part name="iControllo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="elencoRegioniResponse">
+    <wsdl:part name="elencoRegioniReturn" type="tns2:StructTabellaOut" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoDettagliOperativiContattoResponse">
+    <wsdl:part name="aggiornamentoDettagliOperativiContattoReturn" type="tns1:StructEsito" />
+  </wsdl:message>
+  <wsdl:message name="unsubscribeRequest">
+    <wsdl:part name="iKeyUnsubscribe" type="tns5:StructKeyUnsubscribe" />
+  </wsdl:message>
+  <wsdl:message name="elencoProvinceRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneAnagraficaContattoResponse">
+    <wsdl:part name="interrogazioneAnagraficaContattoReturn" type="tns5:StructAnaContattoOut" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoReclamiContattoResponse">
+    <wsdl:part name="aggiornamentoReclamiContattoReturn" type="tns1:StructEsito" />
+  </wsdl:message>
+  <wsdl:message name="cancellazioneAnagraficaContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iKeyAnaContatto" type="tns5:StructPrimaryKeyAnaContatto" />
+  </wsdl:message>
+  <wsdl:message name="recuperoPasswordContattoResponse">
+    <wsdl:part name="recuperoPasswordContattoReturn" type="tns5:StructCrmAnaCredenzialiOut" />
+  </wsdl:message>
+  <wsdl:message name="elencoRegioniRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="elencoProfessioniRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneQuestionariContattoResponse">
+    <wsdl:part name="interrogazioneQuestionariContattoReturn" type="tns5:StructAnaQuestionariOut" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneDettagliOperativiContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iKeyAnaDetOperativi" type="tns5:StructKeyAnaDettagliOperativi" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoQuestionariContattoResponse">
+    <wsdl:part name="aggiornamentoQuestionariContattoReturn" type="tns1:StructEsito" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoAnagraficaContattoResponse">
+    <wsdl:part name="aggiornamentoAnagraficaContattoReturn" type="tns1:StructEsito" />
+  </wsdl:message>
+  <wsdl:message name="elencoSottoscrizioniResponse">
+    <wsdl:part name="elencoSottoscrizioniReturn" type="tns2:StructTabellaOut" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoAnagraficaContattoConConvenzioneRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iAnaContatto" type="tns5:StructAnaContatto" />
+    <wsdl:part name="iConvenzione" type="xsd:string" />
+    <wsdl:part name="iAzione" type="xsd:string" />
+    <wsdl:part name="iControllo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="ricercaAnagraficaCRMResponse">
+    <wsdl:part name="ricercaAnagraficaCRMReturn" type="tns5:StructRisultatiRicercaAnaOut" />
+  </wsdl:message>
+  <wsdl:message name="ricercaAnagraficaCRMRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="params" type="tns5:StructParamRicercaAnaCrm" />
+  </wsdl:message>
+  <wsdl:message name="elencoPreferenzeRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneQuestionariContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iKeyAnaQuestionario" type="tns5:StructKeyAnaQuestionario" />
+  </wsdl:message>
+  <wsdl:message name="aggiornamentoDettagliOperativiContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iAnaDettagliOperativi" type="tns5:StructAnaDettagliOperativi" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneViaggiRecentiContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iKeyAnaViaggiRecenti" type="tns5:StructKeyAnaViaggiRecenti" />
+  </wsdl:message>
+  <wsdl:message name="elencoConvenzioniRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:message name="exportAnagraficheCRMRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="params" type="tns5:StructParamRicercaAnaCrm" />
+  </wsdl:message>
+  <wsdl:message name="interrogazioneReclamiContattoRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iKeyAnaReclami" type="tns5:StructKeyAnaReclami" />
+  </wsdl:message>
+  <wsdl:message name="elencoNazioniRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+  </wsdl:message>
+  <wsdl:portType name="WebServicesCRM">
+    <wsdl:operation name="elencoProvince" parameterOrder="iLogin">
+      <wsdl:input name="elencoProvinceRequest" message="intf:elencoProvinceRequest" />
+      <wsdl:output name="elencoProvinceResponse" message="intf:elencoProvinceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoNazioni" parameterOrder="iLogin">
+      <wsdl:input name="elencoNazioniRequest" message="intf:elencoNazioniRequest" />
+      <wsdl:output name="elencoNazioniResponse" message="intf:elencoNazioniResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoRegioni" parameterOrder="iLogin">
+      <wsdl:input name="elencoRegioniRequest" message="intf:elencoRegioniRequest" />
+      <wsdl:output name="elencoRegioniResponse" message="intf:elencoRegioniResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoProfessioni" parameterOrder="iLogin">
+      <wsdl:input name="elencoProfessioniRequest" message="intf:elencoProfessioniRequest" />
+      <wsdl:output name="elencoProfessioniResponse" message="intf:elencoProfessioniResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoMansioniAziendali" parameterOrder="iLogin">
+      <wsdl:input name="elencoMansioniAziendaliRequest" message="intf:elencoMansioniAziendaliRequest" />
+      <wsdl:output name="elencoMansioniAziendaliResponse" message="intf:elencoMansioniAziendaliResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoCategorieMerceologiche" parameterOrder="iLogin">
+      <wsdl:input name="elencoCategorieMerceologicheRequest" message="intf:elencoCategorieMerceologicheRequest" />
+      <wsdl:output name="elencoCategorieMerceologicheResponse" message="intf:elencoCategorieMerceologicheResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoPreferenze" parameterOrder="iLogin">
+      <wsdl:input name="elencoPreferenzeRequest" message="intf:elencoPreferenzeRequest" />
+      <wsdl:output name="elencoPreferenzeResponse" message="intf:elencoPreferenzeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoConvenzioni" parameterOrder="iLogin">
+      <wsdl:input name="elencoConvenzioniRequest" message="intf:elencoConvenzioniRequest" />
+      <wsdl:output name="elencoConvenzioniResponse" message="intf:elencoConvenzioniResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoTipiSoggetto" parameterOrder="iLogin">
+      <wsdl:input name="elencoTipiSoggettoRequest" message="intf:elencoTipiSoggettoRequest" />
+      <wsdl:output name="elencoTipiSoggettoResponse" message="intf:elencoTipiSoggettoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="elencoSottoscrizioni" parameterOrder="iLogin">
+      <wsdl:input name="elencoSottoscrizioniRequest" message="intf:elencoSottoscrizioniRequest" />
+      <wsdl:output name="elencoSottoscrizioniResponse" message="intf:elencoSottoscrizioniResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="exportAnagraficheCRM" parameterOrder="iLogin params">
+      <wsdl:input name="exportAnagraficheCRMRequest" message="intf:exportAnagraficheCRMRequest" />
+      <wsdl:output name="exportAnagraficheCRMResponse" message="intf:exportAnagraficheCRMResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ricercaAnagraficaCRM" parameterOrder="iLogin params">
+      <wsdl:input name="ricercaAnagraficaCRMRequest" message="intf:ricercaAnagraficaCRMRequest" />
+      <wsdl:output name="ricercaAnagraficaCRMResponse" message="intf:ricercaAnagraficaCRMResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneAnagraficaContattoConConvenzione" parameterOrder="iLogin iKeyAnaContatto iConvenzione iAzione iAzioni">
+      <wsdl:input name="interrogazioneAnagraficaContattoConConvenzioneRequest" message="intf:interrogazioneAnagraficaContattoConConvenzioneRequest" />
+      <wsdl:output name="interrogazioneAnagraficaContattoConConvenzioneResponse" message="intf:interrogazioneAnagraficaContattoConConvenzioneResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneAnagraficaContatto" parameterOrder="iLogin iKeyAnaContatto iAzioni">
+      <wsdl:input name="interrogazioneAnagraficaContattoRequest" message="intf:interrogazioneAnagraficaContattoRequest" />
+      <wsdl:output name="interrogazioneAnagraficaContattoResponse" message="intf:interrogazioneAnagraficaContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoAnagraficaContattoConConvenzione" parameterOrder="iLogin iAnaContatto iConvenzione iAzione iControllo">
+      <wsdl:input name="aggiornamentoAnagraficaContattoConConvenzioneRequest" message="intf:aggiornamentoAnagraficaContattoConConvenzioneRequest" />
+      <wsdl:output name="aggiornamentoAnagraficaContattoConConvenzioneResponse" message="intf:aggiornamentoAnagraficaContattoConConvenzioneResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoAnagraficaContatto" parameterOrder="iLogin iAnaContatto iControllo">
+      <wsdl:input name="aggiornamentoAnagraficaContattoRequest" message="intf:aggiornamentoAnagraficaContattoRequest" />
+      <wsdl:output name="aggiornamentoAnagraficaContattoResponse" message="intf:aggiornamentoAnagraficaContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="unsubscribe" parameterOrder="iKeyUnsubscribe">
+      <wsdl:input name="unsubscribeRequest" message="intf:unsubscribeRequest" />
+      <wsdl:output name="unsubscribeResponse" message="intf:unsubscribeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperoPasswordContatto" parameterOrder="iLogin iKeyRecuperoPassword">
+      <wsdl:input name="recuperoPasswordContattoRequest" message="intf:recuperoPasswordContattoRequest" />
+      <wsdl:output name="recuperoPasswordContattoResponse" message="intf:recuperoPasswordContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneQuestionariContatto" parameterOrder="iLogin iKeyAnaQuestionario">
+      <wsdl:input name="interrogazioneQuestionariContattoRequest" message="intf:interrogazioneQuestionariContattoRequest" />
+      <wsdl:output name="interrogazioneQuestionariContattoResponse" message="intf:interrogazioneQuestionariContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoQuestionariContatto" parameterOrder="iLogin iAnaQuestionari">
+      <wsdl:input name="aggiornamentoQuestionariContattoRequest" message="intf:aggiornamentoQuestionariContattoRequest" />
+      <wsdl:output name="aggiornamentoQuestionariContattoResponse" message="intf:aggiornamentoQuestionariContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneQuestionario" parameterOrder="iLogin iIdQuestionario">
+      <wsdl:input name="interrogazioneQuestionarioRequest" message="intf:interrogazioneQuestionarioRequest" />
+      <wsdl:output name="interrogazioneQuestionarioResponse" message="intf:interrogazioneQuestionarioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneViaggiRecentiContatto" parameterOrder="iLogin iKeyAnaViaggiRecenti">
+      <wsdl:input name="interrogazioneViaggiRecentiContattoRequest" message="intf:interrogazioneViaggiRecentiContattoRequest" />
+      <wsdl:output name="interrogazioneViaggiRecentiContattoResponse" message="intf:interrogazioneViaggiRecentiContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneDettagliOperativiContatto" parameterOrder="iLogin iKeyAnaDetOperativi">
+      <wsdl:input name="interrogazioneDettagliOperativiContattoRequest" message="intf:interrogazioneDettagliOperativiContattoRequest" />
+      <wsdl:output name="interrogazioneDettagliOperativiContattoResponse" message="intf:interrogazioneDettagliOperativiContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoDettagliOperativiContatto" parameterOrder="iLogin iAnaDettagliOperativi">
+      <wsdl:input name="aggiornamentoDettagliOperativiContattoRequest" message="intf:aggiornamentoDettagliOperativiContattoRequest" />
+      <wsdl:output name="aggiornamentoDettagliOperativiContattoResponse" message="intf:aggiornamentoDettagliOperativiContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoReclamiContatto" parameterOrder="iLogin iAnaReclami">
+      <wsdl:input name="aggiornamentoReclamiContattoRequest" message="intf:aggiornamentoReclamiContattoRequest" />
+      <wsdl:output name="aggiornamentoReclamiContattoResponse" message="intf:aggiornamentoReclamiContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneReclamiContatto" parameterOrder="iLogin iKeyAnaReclami">
+      <wsdl:input name="interrogazioneReclamiContattoRequest" message="intf:interrogazioneReclamiContattoRequest" />
+      <wsdl:output name="interrogazioneReclamiContattoResponse" message="intf:interrogazioneReclamiContattoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="iscrizioneNewsletter" parameterOrder="iLogin iStructAnaContattoRidotta iControllo">
+      <wsdl:input name="iscrizioneNewsletterRequest" message="intf:iscrizioneNewsletterRequest" />
+      <wsdl:output name="iscrizioneNewsletterResponse" message="intf:iscrizioneNewsletterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancellazioneAnagraficaContatto" parameterOrder="iLogin iKeyAnaContatto">
+      <wsdl:input name="cancellazioneAnagraficaContattoRequest" message="intf:cancellazioneAnagraficaContattoRequest" />
+      <wsdl:output name="cancellazioneAnagraficaContattoResponse" message="intf:cancellazioneAnagraficaContattoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServicesCRMSoapBinding" type="intf:WebServicesCRM">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="elencoProvince">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoProvinceRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoProvinceResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoNazioni">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoNazioniRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoNazioniResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoRegioni">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoRegioniRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoRegioniResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoProfessioni">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoProfessioniRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoProfessioniResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoMansioniAziendali">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoMansioniAziendaliRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoMansioniAziendaliResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoCategorieMerceologiche">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoCategorieMerceologicheRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoCategorieMerceologicheResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoPreferenze">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoPreferenzeRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoPreferenzeResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoConvenzioni">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoConvenzioniRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoConvenzioniResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoTipiSoggetto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoTipiSoggettoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoTipiSoggettoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="elencoSottoscrizioni">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="elencoSottoscrizioniRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="elencoSottoscrizioniResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exportAnagraficheCRM">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="exportAnagraficheCRMRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="exportAnagraficheCRMResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ricercaAnagraficaCRM">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ricercaAnagraficaCRMRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="ricercaAnagraficaCRMResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneAnagraficaContattoConConvenzione">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="interrogazioneAnagraficaContattoConConvenzioneRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="interrogazioneAnagraficaContattoConConvenzioneResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneAnagraficaContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="interrogazioneAnagraficaContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="interrogazioneAnagraficaContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoAnagraficaContattoConConvenzione">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="aggiornamentoAnagraficaContattoConConvenzioneRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="aggiornamentoAnagraficaContattoConConvenzioneResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoAnagraficaContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="aggiornamentoAnagraficaContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="aggiornamentoAnagraficaContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="unsubscribe">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="unsubscribeRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="unsubscribeResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recuperoPasswordContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="recuperoPasswordContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="recuperoPasswordContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneQuestionariContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="interrogazioneQuestionariContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="interrogazioneQuestionariContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoQuestionariContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="aggiornamentoQuestionariContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="aggiornamentoQuestionariContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneQuestionario">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="interrogazioneQuestionarioRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="interrogazioneQuestionarioResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneViaggiRecentiContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="interrogazioneViaggiRecentiContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="interrogazioneViaggiRecentiContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneDettagliOperativiContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="interrogazioneDettagliOperativiContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="interrogazioneDettagliOperativiContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoDettagliOperativiContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="aggiornamentoDettagliOperativiContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="aggiornamentoDettagliOperativiContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aggiornamentoReclamiContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="aggiornamentoReclamiContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="aggiornamentoReclamiContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="interrogazioneReclamiContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="interrogazioneReclamiContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="interrogazioneReclamiContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iscrizioneNewsletter">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="iscrizioneNewsletterRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="iscrizioneNewsletterResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancellazioneAnagraficaContatto">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancellazioneAnagraficaContattoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="cancellazioneAnagraficaContattoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Crm.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServicesCRMService">
+    <wsdl:port name="WebServicesCRM" binding="intf:WebServicesCRMSoapBinding">
+      <wsdlsoap:address location="http://85.46.89.115/standard-atlante-plus/services/WebServicesCRM" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

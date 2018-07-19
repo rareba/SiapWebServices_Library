@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://Servizi.Anagrafiche.APWebServices" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://Strutture.Anagrafiche.APWebServices" xmlns:tns2="http://Strutture.WebServices.siap.com" xmlns:impl="http://Servizi.Anagrafiche.APWebServices" targetNamespace="http://Servizi.Anagrafiche.APWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.WebServices.siap.com">
+      <xsd:import namespace="http://Servizi.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructLogin">
+        <xsd:sequence>
+          <xsd:element name="password" nillable="true" type="xsd:string" />
+          <xsd:element name="utente" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructEsito">
+        <xsd:sequence>
+          <xsd:element name="messaggio" nillable="true" type="xsd:string" />
+          <xsd:element name="stato" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.Anagrafiche.APWebServices">
+      <xsd:import namespace="http://Servizi.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructParamRicCliIn">
+        <xsd:sequence>
+          <xsd:element name="codCliente12" nillable="true" type="xsd:string" />
+          <xsd:element name="codNazione" nillable="true" type="xsd:string" />
+          <xsd:element name="codRegione" nillable="true" type="xsd:string" />
+          <xsd:element name="codZona" nillable="true" type="xsd:string" />
+          <xsd:element name="codiceFiscale" nillable="true" type="xsd:string" />
+          <xsd:element name="dataUltimaModifica" nillable="true" type="xsd:string" />
+          <xsd:element name="localita" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroTel" nillable="true" type="xsd:string" />
+          <xsd:element name="partitaIva" nillable="true" type="xsd:string" />
+          <xsd:element name="ragioneSociale" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructRicClientiIn">
+        <xsd:sequence>
+          <xsd:element name="ILogin" nillable="true" type="tns2:StructLogin" />
+          <xsd:element name="paramRicCliIn" nillable="true" type="tns1:StructParamRicCliIn" />
+          <xsd:element name="tipoRicerca" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaCliente">
+        <xsd:sequence>
+          <xsd:element name="ammessoCredito" nillable="true" type="xsd:string" />
+          <xsd:element name="annullamento" nillable="true" type="xsd:string" />
+          <xsd:element name="cap" nillable="true" type="xsd:string" />
+          <xsd:element name="categoriaCliente" nillable="true" type="xsd:string" />
+          <xsd:element name="checkDigit" nillable="true" type="xsd:string" />
+          <xsd:element name="cin" nillable="true" type="xsd:string" />
+          <xsd:element name="codAgente" nillable="true" type="xsd:string" />
+          <xsd:element name="codBanca" nillable="true" type="xsd:string" />
+          <xsd:element name="codClienteAltroSistema" nillable="true" type="xsd:string" />
+          <xsd:element name="codDivisa" nillable="true" type="xsd:string" />
+          <xsd:element name="codGruppo" nillable="true" type="xsd:string" />
+          <xsd:element name="codIVA" nillable="true" type="xsd:string" />
+          <xsd:element name="codNazCodFiscale" nillable="true" type="xsd:string" />
+          <xsd:element name="codNsBanca" nillable="true" type="xsd:string" />
+          <xsd:element name="codProfessione" nillable="true" type="xsd:string" />
+          <xsd:element name="codTitolo" nillable="true" type="xsd:string" />
+          <xsd:element name="codiceFiscale" nillable="true" type="xsd:string" />
+          <xsd:element name="codiceNazione" nillable="true" type="xsd:string" />
+          <xsd:element name="cognome" nillable="true" type="xsd:string" />
+          <xsd:element name="consensoPrivacy" nillable="true" type="xsd:string" />
+          <xsd:element name="consensoPubblicita" nillable="true" type="xsd:string" />
+          <xsd:element name="consensoPubblicitaElettr" nillable="true" type="xsd:string" />
+          <xsd:element name="consensoPubblicitaTerzi" nillable="true" type="xsd:string" />
+          <xsd:element name="contoCliente12" nillable="true" type="xsd:string" />
+          <xsd:element name="contocorrenteBancario" nillable="true" type="xsd:string" />
+          <xsd:element name="cpdc_personalizzato" nillable="true" type="xsd:string" />
+          <xsd:element name="dataAttivazCartaGlobeTrotter" nillable="true" type="xsd:string" />
+          <xsd:element name="dataConsenso" nillable="true" type="xsd:string" />
+          <xsd:element name="dataGaranziaRID" nillable="true" type="xsd:string" />
+          <xsd:element name="dataNascita" nillable="true" type="xsd:string" />
+          <xsd:element name="dataRilascioDoc" nillable="true" type="xsd:string" />
+          <xsd:element name="dataScadDoc" nillable="true" type="xsd:string" />
+          <xsd:element name="email" nillable="true" type="xsd:string" />
+          <xsd:element name="enteRilascioDoc" nillable="true" type="xsd:string" />
+          <xsd:element name="idMimix" nillable="true" type="xsd:string" />
+          <xsd:element name="indirSpedRIBA" nillable="true" type="xsd:string" />
+          <xsd:element name="indirizzo" nillable="true" type="xsd:string" />
+          <xsd:element name="invioDocEmail" nillable="true" type="xsd:string" />
+          <xsd:element name="locNascita" nillable="true" type="xsd:string" />
+          <xsd:element name="locRilascioDoc" nillable="true" type="xsd:string" />
+          <xsd:element name="localita" nillable="true" type="xsd:string" />
+          <xsd:element name="modPagamento" nillable="true" type="xsd:string" />
+          <xsd:element name="nome" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroCartaGlobeTrotter" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroCellulare" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroDocumento" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroFax" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroTel1" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroTel2" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroTel3" nillable="true" type="xsd:string" />
+          <xsd:element name="partitaIva" nillable="true" type="xsd:string" />
+          <xsd:element name="persFisicaGiur" nillable="true" type="xsd:string" />
+          <xsd:element name="prefissoInternaz" nillable="true" type="xsd:string" />
+          <xsd:element name="provNascita" nillable="true" type="xsd:string" />
+          <xsd:element name="provRilascioDoc" nillable="true" type="xsd:string" />
+          <xsd:element name="provincia" nillable="true" type="xsd:string" />
+          <xsd:element name="ragioneSocInRichiesta" nillable="true" type="xsd:string" />
+          <xsd:element name="ragioneSociale" nillable="true" type="xsd:string" />
+          <xsd:element name="sesso" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoDocumento" nillable="true" type="xsd:string" />
+          <xsd:element name="tipologiaCliente" nillable="true" type="xsd:string" />
+          <xsd:element name="unitaOp" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructRicClientiOut">
+        <xsd:sequence>
+          <xsd:element name="azioneEseguita" nillable="true" type="xsd:string" />
+          <xsd:element name="eleClienti" nillable="true" type="impl:ArrayOf_tns1_StructAnaCliente" />
+          <xsd:element name="esito" nillable="true" type="tns2:StructEsito" />
+          <xsd:element name="risultatoCompleto" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Servizi.Anagrafiche.APWebServices">
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_tns1_StructAnaCliente">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:StructAnaCliente[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ricercaRequest">
+    <wsdl:part name="structIn" type="tns1:StructRicClientiIn" />
+  </wsdl:message>
+  <wsdl:message name="ricercaResponse">
+    <wsdl:part name="ricercaReturn" type="tns1:StructRicClientiOut" />
+  </wsdl:message>
+  <wsdl:portType name="EleClienti_WS">
+    <wsdl:operation name="ricerca" parameterOrder="structIn">
+      <wsdl:input name="ricercaRequest" message="impl:ricercaRequest" />
+      <wsdl:output name="ricercaResponse" message="impl:ricercaResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EleClienti_WSSoapBinding" type="impl:EleClienti_WS">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="ricerca">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="ricercaRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Anagrafiche.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="ricercaResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Anagrafiche.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EleClienti_WSService">
+    <wsdl:port name="EleClienti_WS" binding="impl:EleClienti_WSSoapBinding">
+      <wsdlsoap:address location="http://85.46.89.115/standard-atlante-plus/services/EleClienti_WS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
