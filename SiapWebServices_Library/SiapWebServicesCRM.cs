@@ -5,6 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ServiceModel;
 using System;
+using System.IO;
+using ExcelDataReader;
+using System.Data;
+using SiapWebServices_Library;
 
 namespace SiapWebServicesCRM
 {
@@ -39,8 +43,8 @@ namespace SiapWebServicesCRM
             {
                 soggetto = customer_type,
                 codKeyUnitaOp = "-1",
-                indiceIniziale = 1,
-                indiceFinale = 30000,
+                indiceIniziale = 0,
+                indiceFinale = 2147483647,
                 statoRecord = " "
             };
 
@@ -73,8 +77,8 @@ namespace SiapWebServicesCRM
             {
                 soggetto = customer_type,
                 codKeyUnitaOp = "-1",
-                indiceIniziale = 1,
-                indiceFinale = 30000,
+                indiceIniziale = 0,
+                indiceFinale = 2147483647,
                 statoRecord = " "
             };
 
@@ -179,7 +183,7 @@ namespace SiapWebServicesCRM
                         string numeroprefer = "Preferenza" + count.ToString();
                         var preferen = new
                         {
-                          numeroprefer , pref.codice,
+                            numeroprefer, pref.codice,
                         };
                         count++;
                         Contact.Add(preferen);
@@ -399,75 +403,208 @@ namespace SiapWebServicesCRM
             AllCustomers = await client.ricercaAnagraficaCRMAsync(loginCredentials, Find_All_Customers);
 
             if (AllCustomers.numTotAna != 0)
+            {
+                foreach (StructRisultatoRicercaAnaOut customerobject in AllCustomers.risultati)
                 {
-                    foreach (StructRisultatoRicercaAnaOut customerobject in AllCustomers.risultati)
-                    {
-                        customers.Add(customerobject);
-                    }
+                    customers.Add(customerobject);
                 }
-            
+            }
+
             return customers;
         }
 
+        public static List<CustomerExportObject> Export_Customers_Base64(WebServicesCRMClient client, StructLogin loginCredentials, string customer_type)
+        {
+            var customers_to_return = new List<CustomerExportObject>();
+
+            var Find_All_Customers = new StructParamRicercaAnaCrm
+            {
+                soggetto = customer_type,
+                codKeyUnitaOp = "-1",
+                indiceIniziale = 0,
+                indiceFinale = 2147483647,
+                statoRecord = " "
+            };
+
+            var all_customers = client.exportAnagraficheCRM(loginCredentials, Find_All_Customers);
+
+            if (all_customers.esito.stato == "OK")
+            {
+                DataSet excel;
+                string customers_to_convert = all_customers.contentBase64;
+                Byte[] customers_base64_converted = Convert.FromBase64String(customers_to_convert);
+                MemoryStream ms = new MemoryStream(customers_base64_converted);
+
+                using (var reader = ExcelReaderFactory.CreateReader(ms))
+                {
+                    var result = reader.AsDataSet();
+                    excel = result;
+                }
+
+                DataTable excel_data = excel.Tables[0];
+
+                // Delete first 4 rows
+                for (int i = 4; i >= 0; i--)
+                {
+                    excel_data.Rows[i].Delete();
+                }
+                excel_data.AcceptChanges();
+
+                foreach (DataRow rw in excel_data.AsEnumerable())
+                {
+                    var customer = new CustomerExportObject()
+                    {
+                        _Nome_ = Convert.ToString(rw[0]),
+                        _Cognome_ = Convert.ToString(rw[1]),
+                        _Ragione_Sociale_ = Convert.ToString(rw[2]),
+                        _Indirizzo_ = Convert.ToString(rw[3]),
+                        _Città_ = Convert.ToString(rw[4]),
+                        _CAP_ = Convert.ToString(rw[5]),
+                        _Provincia_ = Convert.ToString(rw[6]),
+                        _Codice_Stato_ = Convert.ToString(rw[7]),
+                        _Codice_Nazione_ = Convert.ToString(rw[8]),
+                        _Agenzia_Ditta_Privato_ = Convert.ToString(rw[9]),
+                        _Codice_Fiscale_ = Convert.ToString(rw[10]),
+                        _Partita_IVA_ = Convert.ToString(rw[11]),
+                        _Sesso_ = Convert.ToString(rw[12]),
+                        _Stato_Record_ = Convert.ToString(rw[13]),
+                        _Regione_ = Convert.ToString(rw[14]),
+                        _Categoria_ = Convert.ToString(rw[15]),
+                        _Informazioni_Aggiuntive_ = Convert.ToString(rw[16]),
+                        _Persona_Fisica_ = Convert.ToString(rw[17]),
+                        _Data_Nascita_ = Convert.ToString(rw[18]),
+                        _Luogo_Nascita_ = Convert.ToString(rw[19]),
+                        _Stato_Civile_ = Convert.ToString(rw[20]),
+                        _Codice_Professione_ = Convert.ToString(rw[21]),
+                        _Codice_Titolo_ = Convert.ToString(rw[22]),
+                        _Categoria_Merceologica_ = Convert.ToString(rw[23]),
+                        _Sottocategoria_Merceologica_ = Convert.ToString(rw[24]),
+                        _Codice_Gruppo_ = Convert.ToString(rw[25]),
+                        _Codice_Titolo_Studio_ = Convert.ToString(rw[26]),
+                        _Codice_Note_Persona_ = Convert.ToString(rw[27]),
+                        _Codice_Stato_Operativo_ = Convert.ToString(rw[28]),
+                        _Unità_Operativa_ = Convert.ToString(rw[29]),
+                        _Consenso_Privacy_Servizi_ = Convert.ToString(rw[30]),
+                        _Consenso_Privacy_Materiale_ = Convert.ToString(rw[31]),
+                        _Consenso_Privacy_Elettronica_Email_ = Convert.ToString(rw[32]),
+                        _Consenso_Privacy_Terzi_ = Convert.ToString(rw[33]),
+                        _Consenso_Privacy_Sensibili_Terzi_ = Convert.ToString(rw[34]),
+                        _Telefono_ = Convert.ToString(rw[35]),
+                        _Cellulare_ = Convert.ToString(rw[36]),
+                        _E_mail_ = Convert.ToString(rw[37]),
+                        _Soggetti_Per_Anagrafica_ = Convert.ToString(rw[38]),
+                    };
+                }
+                
+            }
+            return customers_to_return;
 
 
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
+        
     }
+
+    public class CustomerExportObject
+    {
+        public string _Nome_ { get; set; }
+        public string _Cognome_ { get; set; }
+        public string _Ragione_Sociale_ { get; set; }
+        public string _Indirizzo_ { get; set; }
+        public string _Città_ { get; set; }
+        public string _CAP_ { get; set; }
+        public string _Provincia_ { get; set; }
+        public string _Codice_Stato_ { get; set; }
+        public string _Codice_Nazione_ { get; set; }
+        public string _Agenzia_Ditta_Privato_ { get; set; }
+        public string _Codice_Fiscale_ { get; set; }
+        public string _Partita_IVA_ { get; set; }
+        public string _Sesso_ { get; set; }
+        public string _Stato_Record_ { get; set; }
+        public string _Regione_ { get; set; }
+        public string _Categoria_ { get; set; }
+        public string _Informazioni_Aggiuntive_ { get; set; }
+        public string _Persona_Fisica_ { get; set; }
+        public string _Data_Nascita_ { get; set; }
+        public string _Luogo_Nascita_ { get; set; }
+        public string _Stato_Civile_ { get; set; }
+        public string _Codice_Professione_ { get; set; }
+        public string _Codice_Titolo_ { get; set; }
+        public string _Categoria_Merceologica_ { get; set; }
+        public string _Sottocategoria_Merceologica_ { get; set; }
+        public string _Codice_Gruppo_ { get; set; }
+        public string _Codice_Titolo_Studio_ { get; set; }
+        public string _Codice_Note_Persona_ { get; set; }
+        public string _Codice_Stato_Operativo_ { get; set; }
+        public string _Unità_Operativa_ { get; set; }
+        public string _Consenso_Privacy_Servizi_ { get; set; }
+        public string _Consenso_Privacy_Materiale_ { get; set; }
+        public string _Consenso_Privacy_Elettronica_Email_ { get; set; }
+        public string _Consenso_Privacy_Terzi_ { get; set; }
+        public string _Consenso_Privacy_Sensibili_Terzi_ { get; set; }
+        public string _Telefono_ { get; set; }
+        public string _Cellulare_ { get; set; }
+        public string _E_mail_ { get; set; }
+        public string _Soggetti_Per_Anagrafica_ { get; set; }
+    
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

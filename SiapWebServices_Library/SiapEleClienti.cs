@@ -28,7 +28,10 @@ namespace SiapEleClienti
         {
             if (parameters == null)
             {
-                parameters.codCliente12 = "20";
+                parameters = new StructParamRicCliIn
+                {
+                    codCliente12 = "20"
+                };
             }
 
             var customer_list = new List<StructAnaCliente>();
