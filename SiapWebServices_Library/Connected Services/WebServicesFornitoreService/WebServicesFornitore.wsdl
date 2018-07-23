@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://Servizi.Anagrafiche.APWebServices" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://Strutture.WebServices.siap.com" xmlns:tns2="http://Strutture.Anagrafiche.APWebServices" xmlns:impl="http://Servizi.Anagrafiche.APWebServices" targetNamespace="http://Servizi.Anagrafiche.APWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.WebServices.siap.com">
+      <xsd:import namespace="http://Servizi.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructLogin">
+        <xsd:sequence>
+          <xsd:element name="password" nillable="true" type="xsd:string" />
+          <xsd:element name="utente" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructEsito">
+        <xsd:sequence>
+          <xsd:element name="messaggio" nillable="true" type="xsd:string" />
+          <xsd:element name="stato" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.Anagrafiche.APWebServices">
+      <xsd:import namespace="http://Servizi.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructAnaFornitore">
+        <xsd:sequence>
+          <xsd:element name="abi" nillable="true" type="xsd:string" />
+          <xsd:element name="cab" nillable="true" type="xsd:string" />
+          <xsd:element name="cap" nillable="true" type="xsd:string" />
+          <xsd:element name="codAgenziaRif" nillable="true" type="xsd:string" />
+          <xsd:element name="codBanca" nillable="true" type="xsd:string" />
+          <xsd:element name="codBancaClienteCorrispondente" nillable="true" type="xsd:string" />
+          <xsd:element name="codCategoria" nillable="true" type="xsd:string" />
+          <xsd:element name="codCheckDigit" nillable="true" type="xsd:string" />
+          <xsd:element name="codCheckDigitClienteCorrispondente" nillable="true" type="xsd:string" />
+          <xsd:element name="codCin" nillable="true" type="xsd:string" />
+          <xsd:element name="codCinClienteCorrispondente" nillable="true" type="xsd:string" />
+          <xsd:element name="codClienteCorrispondente" nillable="true" type="xsd:string" />
+          <xsd:element name="codFiscale" nillable="true" type="xsd:string" />
+          <xsd:element name="codFornitoreAltroSistema" nillable="true" type="xsd:string" />
+          <xsd:element name="codGruppo" nillable="true" type="xsd:string" />
+          <xsd:element name="codModPagamento" nillable="true" type="xsd:string" />
+          <xsd:element name="codNazIsoPerPagamIntrastat" nillable="true" type="xsd:string" />
+          <xsd:element name="codNazione" nillable="true" type="xsd:string" />
+          <xsd:element name="codNsBanca" nillable="true" type="xsd:string" />
+          <xsd:element name="codNsBancaClienteCorrispondente" nillable="true" type="xsd:string" />
+          <xsd:element name="codRiconoscimento" nillable="true" type="xsd:string" />
+          <xsd:element name="codValuta" nillable="true" type="xsd:string" />
+          <xsd:element name="codZona" nillable="true" type="xsd:string" />
+          <xsd:element name="codice" nillable="true" type="xsd:string" />
+          <xsd:element name="contoContropartita" nillable="true" type="xsd:string" />
+          <xsd:element name="contoCorrenteBancario" nillable="true" type="xsd:string" />
+          <xsd:element name="contoCorrenteBancarioClienteCorrispondente" nillable="true" type="xsd:string" />
+          <xsd:element name="cpdc_personalizzato" nillable="true" type="xsd:string" />
+          <xsd:element name="cpdc_personalizzatoClienteCorrispondente" nillable="true" type="xsd:string" />
+          <xsd:element name="dataNascita" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizioneBanca" nillable="true" type="xsd:string" />
+          <xsd:element name="email" nillable="true" type="xsd:string" />
+          <xsd:element name="flagAllegatoIva" nillable="true" type="xsd:string" />
+          <xsd:element name="flagAllegatoParadFisc" nillable="true" type="xsd:string" />
+          <xsd:element name="flagGeneraClienteCorrispondente" nillable="true" type="xsd:string" />
+          <xsd:element name="flagInvioDocEmail" nillable="true" type="xsd:string" />
+          <xsd:element name="flagObbNumVouAgg" nillable="true" type="xsd:string" />
+          <xsd:element name="flagTipoPers" nillable="true" type="xsd:string" />
+          <xsd:element name="flagTipologiaVenditaPrt" nillable="true" type="xsd:string" />
+          <xsd:element name="flagTipologiaVenditaVou" nillable="true" type="xsd:string" />
+          <xsd:element name="flagTourOperator" nillable="true" type="xsd:string" />
+          <xsd:element name="flagVenditaBloccata" nillable="true" type="xsd:string" />
+          <xsd:element name="indirizzo" nillable="true" type="xsd:string" />
+          <xsd:element name="locNascita" nillable="true" type="xsd:string" />
+          <xsd:element name="localita" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroCel" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroFax" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroTel1" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroTel2" nillable="true" type="xsd:string" />
+          <xsd:element name="numeroTel3" nillable="true" type="xsd:string" />
+          <xsd:element name="paese" nillable="true" type="xsd:string" />
+          <xsd:element name="partitaIva" nillable="true" type="xsd:string" />
+          <xsd:element name="prefissoInternaz" nillable="true" type="xsd:string" />
+          <xsd:element name="provNascita" nillable="true" type="xsd:string" />
+          <xsd:element name="provincia" nillable="true" type="xsd:string" />
+          <xsd:element name="ragioneSociale" nillable="true" type="xsd:string" />
+          <xsd:element name="ragioneSocialeCorta" nillable="true" type="xsd:string" />
+          <xsd:element name="sito" nillable="true" type="xsd:string" />
+          <xsd:element name="statoRecord" nillable="true" type="xsd:string" />
+          <xsd:element name="swift" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaFornitoreIn">
+        <xsd:sequence>
+          <xsd:element name="IAnaFornitore" nillable="true" type="tns2:StructAnaFornitore" />
+          <xsd:element name="IAzione" nillable="true" type="xsd:string" />
+          <xsd:element name="provenienza" nillable="true" type="xsd:string" />
+          <xsd:element name="vModRicerca" nillable="true" type="impl:ArrayOf_xsd_string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StructAnaFornitoreOut">
+        <xsd:sequence>
+          <xsd:element name="anaFornitore" nillable="true" type="tns2:StructAnaFornitore" />
+          <xsd:element name="azioneEseguita" nillable="true" type="xsd:string" />
+          <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Servizi.Anagrafiche.APWebServices">
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="gestioneAnagraficaFornitoreResponse">
+    <wsdl:part name="gestioneAnagraficaFornitoreReturn" type="tns2:StructAnaFornitoreOut" />
+  </wsdl:message>
+  <wsdl:message name="gestioneAnagraficaFornitoreRequest">
+    <wsdl:part name="iLogin" type="tns1:StructLogin" />
+    <wsdl:part name="iAnaFornitoreIn" type="tns2:StructAnaFornitoreIn" />
+  </wsdl:message>
+  <wsdl:portType name="WebServicesFornitore">
+    <wsdl:operation name="gestioneAnagraficaFornitore" parameterOrder="iLogin iAnaFornitoreIn">
+      <wsdl:input name="gestioneAnagraficaFornitoreRequest" message="impl:gestioneAnagraficaFornitoreRequest" />
+      <wsdl:output name="gestioneAnagraficaFornitoreResponse" message="impl:gestioneAnagraficaFornitoreResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServicesFornitoreSoapBinding" type="impl:WebServicesFornitore">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="gestioneAnagraficaFornitore">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="gestioneAnagraficaFornitoreRequest">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Anagrafiche.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="gestioneAnagraficaFornitoreResponse">
+        <wsdlsoap:body use="encoded" namespace="http://Servizi.Anagrafiche.APWebServices" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServicesFornitoreService">
+    <wsdl:port name="WebServicesFornitore" binding="impl:WebServicesFornitoreSoapBinding">
+      <wsdlsoap:address location="http://85.46.89.115/standard-atlante-plus/services/WebServicesFornitore" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

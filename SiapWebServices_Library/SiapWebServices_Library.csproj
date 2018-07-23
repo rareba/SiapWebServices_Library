@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SiapWebServicesFornitore.cs" />
     <Compile Include="Connected Services\EleClienti_WSService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -60,6 +61,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WebServicesCRMService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WebServicesFornitoreService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -123,12 +129,17 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\WebServicesCRMService\WebServicesCRM.wsdl" />
+    <None Include="Connected Services\WebServicesFornitoreService\SiapWebServices_Library.WebServicesFornitoreService.StructAnaFornitoreOut.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WebServicesFornitoreService\WebServicesFornitore.wsdl" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\EleClienti_WSService\" />
     <WCFMetadataStorage Include="Connected Services\EleFornitori_WSService\" />
     <WCFMetadataStorage Include="Connected Services\WebServicesCRMService\" />
+    <WCFMetadataStorage Include="Connected Services\WebServicesFornitoreService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\EleClienti_WSService\configuration91.svcinfo" />
@@ -162,6 +173,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\WebServicesCRMService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WebServicesFornitoreService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WebServicesFornitoreService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WebServicesFornitoreService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
