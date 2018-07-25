@@ -118,262 +118,142 @@ namespace SiapWebServicesCRM
             return contact_details;
         }
 
-        // Trasform Customer details to Object
-        public static dynamic CustomerDetails_To_Object(StructAnaContattoOut details)
+        // Get Customer Details async
+        public static async Task<StructAnaContattoOut> GetCustomerDetailsAsync(WebServicesCRMClient client, StructLogin loginCredentials, string key, string cf, string vatn, string source_type, string userIdSiap)
         {
-            dynamic Contact = new ExpandoObject();
+            StructAzioni AzioniY = new StructAzioni { gestioneAzioni = "Y" };
 
-            Contact.codice_cliente = details.anaContatto.VClienti.First().codCliente;
-            Contact.tipoSoggetto = details.anaContatto.VSoggetti.First().tipoSoggetto;
-            Contact.fonte_chiave = details.anaContatto.fonte.chiave;
-            Contact.fonte_tipo = details.anaContatto.fonte.tipoFonte;
+            StructKeyAnaContatto search = new StructKeyAnaContatto
+            {
+                chiave = key,
+                codFiscale = cf,
+                partitaIva = vatn,
+                tipoFonte = source_type,
+                userIdSiap = userIdSiap
+            };
+
+            StructAnaContattoOut contact_details = await client.interrogazioneAnagraficaContattoAsync(loginCredentials, search, AzioniY);
+
+            return contact_details;
+        }
+
+        // Trasform Customer details to Object
+        public static Complete_CustomerObject CustomerDetails_To_Object(StructAnaContattoOut details)
+        {
+            Complete_CustomerObject Contact = new Complete_CustomerObject();
+
+            Contact.Codice_cliente = details.anaContatto.VClienti.First().codCliente;
+            Contact.TipoSoggetto = details.anaContatto.VSoggetti.First().tipoSoggetto;
+            Contact.Fonte_chiave = string.IsNullOrEmpty(details.anaContatto.fonte.chiave) ? "" : details.anaContatto.fonte.chiave; 
+            Contact.Fonte_tipo = string.IsNullOrEmpty(details.anaContatto.fonte.tipoFonte) ? "" : details.anaContatto.fonte.tipoFonte;
 
             // StructCrmAnaGeneraleRidotta
-            Contact.nome = details.anaContatto.anaGenerale.nome;
-            Contact.cognome = details.anaContatto.anaGenerale.cognome;
-            Contact.ragioneSociale = details.anaContatto.anaGenerale.ragioneSociale;
-            Contact.indirizzo = details.anaContatto.anaGenerale.indirizzo;
-            Contact.citta = details.anaContatto.anaGenerale.citta;
-            Contact.cap = details.anaContatto.anaGenerale.cap;
-            Contact.codProvincia = details.anaContatto.anaGenerale.codProvincia;
-            Contact.codRegione = details.anaContatto.anaGenerale.codRegione;
-            Contact.codStato = details.anaContatto.anaGenerale.codStato;
-            Contact.codNazione = details.anaContatto.anaGenerale.codNazione;
-            Contact.agenziaDittaPrivato = details.anaContatto.anaGenerale.agenziaDittaPrivato;
-            Contact.codiceFiscale = details.anaContatto.anaGenerale.codiceFiscale;
-            Contact.partitaIva = details.anaContatto.anaGenerale.partitaIva;
-            Contact.sesso = details.anaContatto.anaGenerale.sesso;
-            Contact.statoRecord = details.anaContatto.anaGenerale.statoRecord;
+            Contact.Nome = details.anaContatto.anaGenerale.nome;
+            Contact.Cognome = details.anaContatto.anaGenerale.cognome;
+            Contact.RagioneSociale = details.anaContatto.anaGenerale.ragioneSociale;
+            Contact.Indirizzo = details.anaContatto.anaGenerale.indirizzo;
+            Contact.Citta = details.anaContatto.anaGenerale.citta;
+            Contact.Cap = details.anaContatto.anaGenerale.cap;
+            Contact.CodProvincia = details.anaContatto.anaGenerale.codProvincia;
+            Contact.CodRegione = details.anaContatto.anaGenerale.codRegione;
+            Contact.CodStato = details.anaContatto.anaGenerale.codStato;
+            Contact.CodNazione = details.anaContatto.anaGenerale.codNazione;
+            Contact.AgenziaDittaPrivato = details.anaContatto.anaGenerale.agenziaDittaPrivato;
+            Contact.CodiceFiscale = details.anaContatto.anaGenerale.codiceFiscale;
+            Contact.PartitaIva = details.anaContatto.anaGenerale.partitaIva;
+            Contact.Sesso = details.anaContatto.anaGenerale.sesso;
+            Contact.StatoRecord = details.anaContatto.anaGenerale.statoRecord;
 
             // StructCrmAnaGenerale
-            Contact.informazioniAggiuntive = details.anaContatto.anaGenerale.informazioniAggiuntive;
-            Contact.personaFisica = details.anaContatto.anaGenerale.personaFisica;
-            Contact.dataNascita = details.anaContatto.anaGenerale.dataNascita;
-            Contact.luogoNascita = details.anaContatto.anaGenerale.luogoNascita;
-            Contact.statoCivile = details.anaContatto.anaGenerale.statoCivile;
-            Contact.codProfessione = details.anaContatto.anaGenerale.codProfessione;
-            Contact.codTitolo = details.anaContatto.anaGenerale.codTitolo;
-            Contact.catMerceol = details.anaContatto.anaGenerale.catMerceol;
-            Contact.sottoCatMerceol = details.anaContatto.anaGenerale.sottoCatMerceol;
-            Contact.codGruppo = details.anaContatto.anaGenerale.codGruppo;
-            Contact.codTitoloStudio = details.anaContatto.anaGenerale.codTitoloStudio;
-            Contact.codNotePersona = details.anaContatto.anaGenerale.codNotePersona;
-            Contact.codStatoOperativo = details.anaContatto.anaGenerale.codStatoOperativo;
-            Contact.consensoPrivacyServizi = details.anaContatto.anaGenerale.consensoPrivacyServizi;
-            Contact.consensoPrivacyMateriale = details.anaContatto.anaGenerale.consensoPrivacyMateriale;
-            Contact.consensoPrivacyTerzi = details.anaContatto.anaGenerale.consensoPrivacyServizi;
-            Contact.consensoPrivacySensibiliTerzi = details.anaContatto.anaGenerale.consensoPrivacySensibiliTerzi;
-            Contact.unitaOperativa = details.anaContatto.anaGenerale.unitaOperativa;
+            Contact.InformazioniAggiuntive = details.anaContatto.anaGenerale.informazioniAggiuntive;
+            Contact.PersonaFisica = details.anaContatto.anaGenerale.personaFisica;
+            Contact.DataNascita = details.anaContatto.anaGenerale.dataNascita;
+            Contact.LuogoNascita = details.anaContatto.anaGenerale.luogoNascita;
+            Contact.StatoCivile = details.anaContatto.anaGenerale.statoCivile;
+            Contact.CodProfessione = details.anaContatto.anaGenerale.codProfessione;
+            Contact.CodTitolo = details.anaContatto.anaGenerale.codTitolo;
+            Contact.CatMerceol = details.anaContatto.anaGenerale.catMerceol;
+            Contact.SottoCatMerceol = details.anaContatto.anaGenerale.sottoCatMerceol;
+            Contact.CodGruppo = details.anaContatto.anaGenerale.codGruppo;
+            Contact.CodTitoloStudio = details.anaContatto.anaGenerale.codTitoloStudio;
+            Contact.CodNotePersona = details.anaContatto.anaGenerale.codNotePersona;
+            Contact.CodStatoOperativo = details.anaContatto.anaGenerale.codStatoOperativo;
+            Contact.ConsensoPrivacyServizi = details.anaContatto.anaGenerale.consensoPrivacyServizi;
+            Contact.ConsensoPrivacyMateriale = details.anaContatto.anaGenerale.consensoPrivacyMateriale;
+            Contact.ConsensoPrivacyTerzi = details.anaContatto.anaGenerale.consensoPrivacyServizi;
+            Contact.ConsensoPrivacySensibiliTerzi = details.anaContatto.anaGenerale.consensoPrivacySensibiliTerzi;
+            Contact.UnitaOperativa = details.anaContatto.anaGenerale.unitaOperativa;
 
             // Credenziali
-            Contact.userIdSiap = details.anaContatto.credenziali.userIdSiap;
-            Contact.codAccessoSiap = details.anaContatto.credenziali.codAccessoSiap;
-            Contact.newUserIdSiap = details.anaContatto.credenziali.newUserIdSiap;
-            Contact.newCodAccessoSiap = details.anaContatto.credenziali.newCodAccessoSiap;
+            Contact.UserIdSiap = details.anaContatto.credenziali.userIdSiap;
+            Contact.CodAccessoSiap = details.anaContatto.credenziali.codAccessoSiap;
+            Contact.NewUserIdSiap = details.anaContatto.credenziali.newUserIdSiap;
+            Contact.NewCodAccessoSiap = details.anaContatto.credenziali.newCodAccessoSiap;
 
             // Preferenze
             foreach (StructCrmAnaPreferenze pre in details.anaContatto.VPreferenze)
             {
-                foreach (StructPreferenze pref in pre.VOpzioni)
-                {
-                    int count = 1;
-
-                    if (pref.@checked == "Y")
-                    {
-                        string numeroprefer = "Preferenza" + count.ToString();
-                        var preferen = new
-                        {
-                            numeroprefer, pref.codice,
-                        };
-                        count++;
-                        Contact.Add(preferen);
-                    }
-                }
+                    Contact.Preferenze.Add(pre);
             }
 
-            // Azioni (separate csv file for separate table)
+            // Azioni
             foreach (StructCrmAzione act in details.anaContatto.VAzioni)
             {
-                dynamic azione = new ExpandoObject();
-
-                azione.codGruOpeNotificaAzEseguita = act.codGruOpeNotificaAzEseguita;
-                azione.codGruOpeNotificaAzSuccessiva = act.codGruOpeNotificaAzSuccessiva;
-                azione.codOpeAzEseguita = act.codOpeAzEseguita;
-                azione.codOpeAzSuccessiva = act.codOpeAzSuccessiva;
-                azione.codOpeCreaz = act.codOpeCreaz;
-                azione.codOpeNotificaAzEseguita = act.codOpeNotificaAzEseguita;
-                azione.codOpeNotificaAzSuccessiva = act.codOpeNotificaAzSuccessiva;
-                azione.codTipoApAzEseguita = act.codTipoApAzEseguita;
-                azione.codTipoApAzSuccessiva = act.codTipoApAzSuccessiva;
-                azione.dataAzEseguita = act.dataAzEseguita;
-                azione.dataAzSuccessiva = act.dataAzSuccessiva;
-                azione.dataCreaz = act.dataCreaz;
-                azione.dataProgrammataAzEseguita = act.dataProgrammataAzEseguita;
-                azione.dataProgrammataAzSuccessiva = act.dataProgrammataAzSuccessiva;
-                azione.descAzEseguita = act.descAzEseguita;
-                azione.descAzSuccessiva = act.descAzSuccessiva;
-                azione.desRiferimento = act.desRiferimento;
-                azione.emailNotificaAzEseguita = act.emailNotificaAzEseguita;
-                azione.emailNotificaAzSuccessiva = act.emailNotificaAzSuccessiva;
-                azione.flagNotificaAzEseguita = act.flagNotificaAzEseguita;
-                azione.flagNotificaAzSuccessiva = act.flagNotificaAzSuccessiva;
-                azione.flagTipoNotificaAzSuccessiva = act.flagTipoNotificaAzSuccessiva;
-                azione.idAzione = act.idAzione;
-                azione.oraAzEseguita = act.oraAzEseguita;
-                azione.oraAzSuccessiva = act.oraAzSuccessiva;
-                azione.oraCreaz = act.oraCreaz;
-                azione.oraProgrammataAzEseguita = act.oraProgrammataAzEseguita;
-                azione.oraProgrammataAzSuccessiva = act.oraProgrammataAzSuccessiva;
-                azione.sottoAzioneL1 = act.sottoAzioneL1;
-                azione.sottoAzioneL2 = act.sottoAzioneL2;
-                azione.sottoAzioneL3 = act.sottoAzioneL3;
-                azione.sottoAzioneL4 = act.sottoAzioneL4;
-                azione.stato = act.stato;
-                azione.statoRecord = act.statoRecord;
-                azione.tipo = act.tipo;
-                azione.tipoRiferimento = act.tipoRiferimento;
-
-                Contact.Add(azione);
+                Contact.Azioni.Add(act);
             }
 
             // Documenti Multimediali
             foreach (StructCrmAnaDocMult docm in details.anaContatto.VDocumentiMultimediali)
             {
-                dynamic documento_multimediale = new ExpandoObject();
-
-                documento_multimediale.descrizione = docm.descrizione;
-                documento_multimediale.file = docm.file;
-                documento_multimediale.nome = docm.nome;
-                documento_multimediale.tipo = docm.tipo;
-                documento_multimediale.stato = docm.stato;
-
-                Contact.Add(documento_multimediale);
-
+                Contact.DocumentiMultimediali.Add(docm);
             }
 
-            // Documenti Personali
+            // Documenti Personali & movimento punti
             foreach (StructCrmAnaDocPers docp in details.anaContatto.VDocumentiPersonali)
             {
-                dynamic documento_personale = new ExpandoObject();
-
-                documento_personale.progre = docp.progre;
-                documento_personale.tipo = docp.tipo;
-                documento_personale.numero = docp.numero;
-                documento_personale.dataScadenza = docp.dataScadenza;
-                documento_personale.enteRilascio = docp.enteRilascio;
-                documento_personale.dataRilascio = docp.dataRilascio;
-                documento_personale.dataRinnovo = docp.dataRinnovo;
-                documento_personale.codCittadinanza = docp.codCittadinanza;
-                documento_personale.altriDati = docp.altriDati;
-                documento_personale.codStatoOperativo = docp.codStatoOperativo;
-                documento_personale.stato = docp.stato;
-
-                Contact.Add(documento_personale);
-
-                foreach (StructCrmAnaMovimentoPunti mov in docp.VMovimenti)
-                {
-                    dynamic mov_punti = new ExpandoObject();
-
-                    mov_punti.codCausale = mov.codCausale;
-                    mov_punti.progre = mov.progre;
-                    mov_punti.punti = mov.punti;
-                    mov_punti.noteInterne = mov.noteInterne;
-                    mov_punti.statoRecord = mov.statoRecord;
-
-                    Contact.Add(mov_punti);
-
-                }
+                Contact.DocumentiPersonali.Add(docp);
             }
 
             // Recapiti
             foreach (StructCrmAnaRecapiti rec in details.anaContatto.VRecapiti)
             {
-                dynamic recapito = new ExpandoObject();
-
-                recapito.idRecapito = rec.idRecapito;
-                recapito.codRecapito = rec.codRecapito;
-                recapito.indirizzo = rec.indirizzo;
-                recapito.citta = rec.citta;
-                recapito.cap = rec.cap;
-                recapito.codProvincia = rec.codProvincia;
-                recapito.codStato = rec.codStato;
-                recapito.codNazione = rec.codNazione;
-                recapito.note = rec.note;
-                recapito.dataValiditaIn = rec.dataValiditaIn;
-                recapito.dataValiditaFi = rec.dataValiditaFi;
-                recapito.oraIniziale = rec.oraIniziale;
-                recapito.oraFinale = rec.oraFinale;
-                recapito.visibilita = rec.visibilita;
-                recapito.valore = rec.valore;
-                recapito.consensoContatto = rec.consensoContatto;
-                recapito.livelloAccesso = rec.livelloAccesso;
-                recapito.statoRecord = rec.statoRecord;
-
-                Contact.Add(recapito);
+                Contact.Recapiti.Add(rec);
             }
 
             // Convenzioni
             foreach (StructCrmAnaConvenzioni conv in details.anaContatto.VConvenzioni)
             {
-                dynamic convenzione = new ExpandoObject();
-
-                convenzione.idConvenzione = conv.idConvenzione;
-                convenzione.codConvenzione = conv.codConvenzione;
-                convenzione.statoRecord = conv.statoRecord;
-
-                Contact.Add(convenzione);
+                Contact.Convenzioni.Add(conv);
             }
 
-            // Estensioni
+            // Estensioni e campi
             foreach (StructCrmAnaEstensioni est in details.anaContatto.VEstensioni)
             {
-                foreach (StructCampo campo in est.VCampi)
-                {
-                    dynamic estensione = new ExpandoObject();
-
-                    estensione.id = est.id;
-                    estensione.id_campo = campo.id;
-                    estensione.label = campo.label;
-                    estensione.descrizione = campo.descrizione;
-                    estensione.tipoRaggruppamento = campo.tipoRaggruppamento;
-                    estensione.tipoInput = campo.tipoInput;
-                    estensione.tipoDato = campo.tipoDato;
-                    estensione.lunghezza = campo.lunghezza;
-                    estensione.decimali = campo.decimali;
-                    estensione.valoriIniziali = campo.valoriIniziali;
-                    estensione.helpContestuale = campo.helpContestuale;
-                    estensione.risposte = campo.risposte;
-
-                    Contact.Add(estensione);
-                }
+                Contact.Estensioni.Add(est);
             }
 
             // Sottoscrizioni e Giocate
             foreach (StructSottoscrizioni sot in details.anaContatto.sottoscrizioni.VOpzioni)
             {
-                dynamic sottoscrizione = new ExpandoObject();
-
-                sottoscrizione.codice = sot.codice;
-                sottoscrizione.descrizione = sot.descrizione;
-
-                Contact.Add(sottoscrizione);
-
-
-                foreach (StructCrmAnaGiocata gio in sot.VGiocate)
-                {
-                    dynamic giocata = new ExpandoObject();
-
-                    giocata.progre = gio.progre;
-                    giocata.giocato = gio.giocato;
-                    giocata.data = gio.data;
-                    giocata.ora = gio.ora;
-                    giocata.vinto = gio.vinto;
-                    giocata.codPremio = gio.codPremio;
-                    giocata.statoRecord = gio.statoRecord;
-
-                    Contact.Add(giocata);
-                }
+                Contact.Sottoscrizioni.Add(sot);
             }
+
+            // Referenti & recapiti referenti
+            foreach (StructCrmAnaReferenti referent in details.anaContatto.VReferenti)
+            {
+                Contact.Referenti.Add(referent);
+            }
+
+
+
+
+
+
+
+
+
+
+
 
 
             return Contact;
@@ -428,7 +308,7 @@ namespace SiapWebServicesCRM
 
             var all_customers = client.exportAnagraficheCRM(loginCredentials, Find_All_Customers);
 
-            if (all_customers.esito.stato == "OK")
+            if (all_customers.esito.stato == "OK" && all_customers.numTotAna != 0)
             {
                 DataSet excel;
                 string customers_to_convert = all_customers.contentBase64;
@@ -494,18 +374,20 @@ namespace SiapWebServicesCRM
                         _E_mail_ = Convert.ToString(rw[37]),
                         _Soggetti_Per_Anagrafica_ = Convert.ToString(rw[38]),
                     };
+                    customers_to_return.Add(customer);
                 }
-                
+
             }
             return customers_to_return;
 
 
         }
 
-            
-        
+
+
     }
 
+    // Object to export customer
     public class CustomerExportObject
     {
         public string _Nome_ { get; set; }
@@ -547,7 +429,71 @@ namespace SiapWebServicesCRM
         public string _Cellulare_ { get; set; }
         public string _E_mail_ { get; set; }
         public string _Soggetti_Per_Anagrafica_ { get; set; }
-    
+
+    }
+
+    // Object to export all customer data
+    public class Complete_CustomerObject
+    {
+        public string Codice_cliente { get; set; }
+        public string TipoSoggetto { get; set; }
+        public string Fonte_chiave { get; set; }
+        public string Fonte_tipo { get; set; }
+
+        // StructCrmAnaGeneraleRidotta
+        public string Nome { get; set; }
+        public string Cognome { get; set; }
+        public string RagioneSociale { get; set; }
+        public string Indirizzo { get; set; }
+        public string Citta { get; set; }
+        public string Cap { get; set; }
+        public string CodProvincia { get; set; }
+        public string CodRegione { get; set; }
+        public string CodStato { get; set; }
+        public string CodNazione { get; set; }
+        public string AgenziaDittaPrivato { get; set; }
+        public string CodiceFiscale { get; set; }
+        public string PartitaIva { get; set; }
+        public string Sesso { get; set; }
+        public string StatoRecord { get; set; }
+
+        // StructCrmAnaGenerale
+        public string InformazioniAggiuntive { get; set; }
+        public string PersonaFisica { get; set; }
+        public string DataNascita { get; set; }
+        public string LuogoNascita { get; set; }
+        public string StatoCivile { get; set; }
+        public string CodProfessione { get; set; }
+        public string CodTitolo { get; set; }
+        public string CatMerceol { get; set; }
+        public string SottoCatMerceol { get; set; }
+        public string CodGruppo { get; set; }
+        public string CodTitoloStudio { get; set; }
+        public string CodNotePersona { get; set; }
+        public string CodStatoOperativo { get; set; }
+        public string ConsensoPrivacyServizi { get; set; }
+        public string ConsensoPrivacyMateriale { get; set; }
+        public string ConsensoPrivacyTerzi { get; set; }
+        public string ConsensoPrivacySensibiliTerzi { get; set; }
+        public string UnitaOperativa { get; set; }
+
+        // Credenziali
+        public string UserIdSiap { get; set; }
+        public string CodAccessoSiap { get; set; }
+        public string NewUserIdSiap { get; set; }
+        public string NewCodAccessoSiap { get; set; }
+
+        public List<StructCrmAnaPreferenze> Preferenze { get; set; }
+        public List<StructCrmAzione> Azioni { get; set; }
+        public List<StructCrmAnaDocMult> DocumentiMultimediali { get; set; }
+        public List<StructCrmAnaDocPers> DocumentiPersonali { get; set; }
+        public List<StructCrmAnaRecapiti> Recapiti { get; set; }
+        public List<StructCrmAnaConvenzioni> Convenzioni { get; set; }
+        public List<StructCrmAnaEstensioni> Estensioni { get; set; }
+        public List<StructSottoscrizioni> Sottoscrizioni { get; set; }
+        public List<StructCrmAnaGiocata> Giocate { get; set; }
+        public List<StructCrmAnaReferenti> Referenti { get; set; }
+
     }
 
 
