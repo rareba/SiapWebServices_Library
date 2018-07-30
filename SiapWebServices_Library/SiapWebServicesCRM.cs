@@ -99,7 +99,7 @@ namespace SiapWebServicesCRM
             return customers;
         }
 
-        // Get Customer Details in a non-async way
+        // Get Customer Details in a normal way
         public static StructAnaContattoOut GetCustomerDetails(WebServicesCRMClient client, StructLogin loginCredentials, string key, string cf, string vatn, string source_type, string userIdSiap)
         {
             StructAzioni AzioniY = new StructAzioni { gestioneAzioni = "Y" };
@@ -243,18 +243,6 @@ namespace SiapWebServicesCRM
             {
                 Contact.Referenti.Add(referent);
             }
-
-
-
-
-
-
-
-
-
-
-
-
 
             return Contact;
 
