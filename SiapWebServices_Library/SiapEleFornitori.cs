@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ServiceModel;
 using System;
 
-namespace SiapEleFornitori
+namespace SiapWSEleFornitori
 {
     public class SiapEleFornitori_Methods
     {
@@ -83,63 +83,7 @@ namespace SiapEleFornitori
    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+       
 
 
 

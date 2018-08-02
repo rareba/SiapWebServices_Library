@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ServiceModel;
 using System;
 
-namespace SiapEleClienti
+namespace SiapWSEleClienti
 {
     public class SiapEleClienti_Methods
     {
@@ -24,6 +24,7 @@ namespace SiapEleClienti
             return client;
         }
 
+        // Returns a customer list
         public static List<StructAnaCliente> Get_Customer_List(EleClienti_WSClient client, StructLogin loginCredentials, StructParamRicCliIn parameters = null,  string searchType = "E")
         {
             if (parameters == null)
@@ -74,39 +75,7 @@ namespace SiapEleClienti
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
 
 
 

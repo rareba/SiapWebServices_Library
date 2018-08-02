@@ -1,6 +1,5 @@
 ﻿using SiapWebServices_Library.WebServicesCRMService;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ServiceModel;
@@ -8,7 +7,6 @@ using System;
 using System.IO;
 using ExcelDataReader;
 using System.Data;
-using SiapWebServices_Library;
 
 namespace SiapWebServicesCRM
 {
@@ -137,7 +135,7 @@ namespace SiapWebServicesCRM
             return contact_details;
         }
 
-        // Trasform Customer details to Object
+        // Trasform Customer details to Object - not really needed but why not some flattening?
         public static Complete_CustomerObject CustomerDetails_To_Object(StructAnaContattoOut details)
         {
             Complete_CustomerObject Contact = new Complete_CustomerObject();
@@ -281,6 +279,7 @@ namespace SiapWebServicesCRM
             return customers;
         }
 
+        // Gets the customers via base64 string - honestly it's not worth it if you ask me...
         public static List<CustomerExportObject> Export_Customers_Base64(WebServicesCRMClient client, StructLogin loginCredentials, string customer_type)
         {
             var customers_to_return = new List<CustomerExportObject>();
@@ -370,8 +369,6 @@ namespace SiapWebServicesCRM
 
 
         }
-
-
 
     }
 

@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 using SiapWebServices_Library.WebServicesFornitoreService;
 
 
-namespace SiapWebServices_Library
+namespace SiapWSFornitore
 {
-    class SiapWebServicesFornitore
+    public class SiapServicesFornitore_Methods
     {
-
         // Generate Webservices Client
         public static WebServicesFornitoreClient WebServicesFornitore_client()
         {
@@ -29,94 +25,59 @@ namespace SiapWebServices_Library
             return client;
         }
 
-        //public static List<StructAnaFornitore> Get_All_Suppliers(WebServicesFornitoreClient client, StructLogin loginCredentials, string showSuspended = "N", string searchType = "R")
-        //{
-        //    var supplier_list = new List<StructAnaFornitore>();
-        //    StructAnaFornitoreOut supplier_retrived = new StructAnaFornitoreOut() { };
-        //    int conto = 1;
-        //    int sottoconto = 1;
-        //    int codice = 0;
-        //    bool increase_conto;
-        //    bool increase_sottoconto;
-        //    string codFornitore12 = Generate_Supplier_Code_String(codice, sottoconto, conto);
+        public static List<StructAnaFornitoreOut> Get_All_Suppliers(WebServicesFornitoreClient client, StructLogin loginCredentials, string showSuspended = "N", string searchType = "R")
+        {
+            var supplier_list = new List<StructAnaFornitoreOut>();
+            var supplier_retrived = new StructAnaFornitoreOut
+            {
+                esito = new StructEsito
+                {
+                    stato = "OK",
+                }
+            };
 
-        //    StructAnaFornitoreIn parameters = new StructAnaFornitoreIn
-        //    {
-        //        IAzione = "C",
+            int KO_Count = 0;
+            int conto = 1;
+            int sottoconto = 1;
+            int codice = 0;
+            string codFornitore = Generate_Supplier_Code_String(codice, sottoconto, conto);
 
-        //    };
-            
-            
+            var search = new StructAnaFornitoreIn
+            {
+                IAnaFornitore = new StructAnaFornitore
+                {
+                    codice = codFornitore
+                },
+                IAzione = "C",
+                //vModRicerca = new string[] { "COD_FIS","PAR_IVA","ALT_SIS" }
+            };
+            while (KO_Count < 10)
+            {
+                while (KO_Count < 10)
+                {
+                    while (KO_Count < 10)
+                    {
+                        supplier_retrived = client.gestioneAnagraficaFornitore(loginCredentials, search);
 
-        //    var search = new StructRicFornitoriIn
-        //    {
-        //        ILogin = loginCredentials,
-        //        paramRicFornIn = parameters,
-        //        tipoRicerca = searchType
-        //    };
-
-        //    while (supplier_retrived.risultatoCompleto != "E")
-        //    {
-        //        supplier_retrived = client.ricerca(search);
-
-        //        // If now supplier is returned...
-        //        if (supplier_retrived.risultatoCompleto == "N")
-        //        {
-        //            // increase sottoconto and try again
-        //            search.paramRicFornIn.codFornitore12 = Generate_Supplier_Code_String(0, sottoconto++);
-        //            supplier_retrived = client.ricerca(search);
-
-        //            // if still no supplier...
-        //            if (supplier_retrived.risultatoCompleto == "N")
-        //            {
-        //                // increase conto and try again
-        //                search.paramRicFornIn.codFornitore12 = Generate_Supplier_Code_String(0, 1, conto++);
-        //                supplier_retrived = client.ricerca(search);
-
-        //                // if it still doesnt' work end the loop!
-        //                if (supplier_retrived.risultatoCompleto == "N")
-        //                {
-        //                    return supplier_list;
-        //                }
-        //            }
-        //            else
-        //            {
-        //                foreach (StructAnaFornitore supplier in supplier_retrived.eleFornitori)
-        //                {
-        //                    supplier_list.Add(supplier);
-        //                    search.paramRicFornIn.codFornitore12 = Generate_Supplier_Code_String(codice);
-        //                }
-        //            }
-        //        }
-
-        //        else
-        //        {
-        //            foreach (StructAnaFornitore supplier in supplier_retrived.eleFornitori)
-        //            {
-        //                supplier_list.Add(supplier);
-        //                search.paramRicFornIn.codFornitore12 = Generate_Supplier_Code_String(codice);
-        //            }
-        //        }
-
-
-
-
-
-
-
-
-
-
-
-        //    }
-        //        else // Add the supplier to the list
-        //        {
-        //        foreach (StructAnaFornitore supplier in supplier_retrived.eleFornitori)
-        //        {
-        //            supplier_list.Add(supplier);
-        //            search.paramRicFornIn.codFornitore12 = Generate_Supplier_Code_String(codice);
-        //        }
-        //    }
+                        if (supplier_retrived.esito.stato == "KO")
+                        {
+                            KO_Count++;
+                        }
+                        else
+                        {
+                            supplier_list.Add(supplier_retrived);
+                            codFornitore = Generate_Supplier_Code_String(codice, sottoconto, conto);
+                            Console.WriteLine(codFornitore);
+                            codice++;
+                            search.IAnaFornitore.codice = codFornitore;
+                        }
+                    }
+                    KO_Count = 0;
+                    sottoconto++;
+                }
+                KO_Count = 0;
+                conto++;
+            }
 
 
 
@@ -138,13 +99,59 @@ namespace SiapWebServices_Library
 
 
 
-        //}
-
-        //    return supplier_list;
-
-        //}
 
 
+            return supplier_list;
+        }
+
+        // Returns a supplier code string increased by 1
+        public static string Generate_Supplier_Code_String(int codice = 0, int sottoconto = 1, int conto = 1, string mastro = "30")
+        {
+            codice++;
+
+            string string_conto = " ";
+            string string_sottoconto = " ";
+            string string_codice = "     ";
+
+            if (conto > 9)
+            {
+                string_conto = "";
+            }
+
+            if (sottoconto > 9)
+            {
+                string_sottoconto = "";
+            }
+
+            if (codice > 9)
+            {
+                string_codice = "    ";
+            }
+            else if (codice > 99)
+            {
+                string_codice = "   ";
+            }
+            else if (codice > 999)
+            {
+                string_codice = "  ";
+            }
+            else if (codice > 9999)
+            {
+                string_codice = "  ";
+            }
+            else if (codice > 99999)
+            {
+                string_codice = " ";
+            }
+            else if (codice >= 999999)
+            {
+                string_codice = "";
+            }
+
+            string customercode = mastro + string_conto + conto + string_sottoconto + sottoconto + string_codice + codice;
+
+            return customercode;
+        }
 
 
 
@@ -155,7 +162,5 @@ namespace SiapWebServices_Library
 
 
 
-
-
-}
+    }
 }
