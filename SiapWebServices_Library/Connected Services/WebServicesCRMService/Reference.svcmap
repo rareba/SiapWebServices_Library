@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6b3d79b3-922c-4867-95b4-910572cc09a2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dd1e98d2-5c82-4b7f-a5a7-0d2d30f5a21e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,7 +22,7 @@
     <MetadataSource Address="http://85.46.89.115/standard-atlante-plus/services/WebServicesCRM?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebServicesCRM.wsdl" MetadataType="Wsdl" ID="b1865a5c-a221-4d30-a04f-cfbbe3b9539e" SourceId="1" SourceUrl="http://85.46.89.115/standard-atlante-plus/services/WebServicesCRM?wsdl" />
+    <MetadataFile FileName="WebServicesCRM.wsdl" MetadataType="Wsdl" ID="52c04190-3d99-4c91-a330-5813be65e9c6" SourceId="1" SourceUrl="http://85.46.89.115/standard-atlante-plus/services/WebServicesCRM?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

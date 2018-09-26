@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:tns7="http://Main.Classi.siap.com" xmlns:impl="http://Servizi.Crm.APWebServices" xmlns:tns3="http://Tabelle.Crm.APClassi" xmlns:tns2="http://Tabelle.APClassi" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns4="http://Anagrafiche.Crm.APClassi" xmlns:tns10="http://DettagliOperativi.Crm.APClassi" xmlns:tns11="http://Reclami.Crm.APClassi" xmlns:tns8="http://Azioni.Crm.APClassi" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:tns1="http://Strutture.WebServices.siap.com" xmlns:tns6="http://TipiRecord.APClassi" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns5="http://Strutture.Crm.APWebServices" xmlns:tns9="http://Documenti.Crm.APClassi" xmlns:intf="http://Servizi.Crm.APWebServices" targetNamespace="http://Servizi.Crm.APWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:tns7="http://TipiRecord.APClassi" xmlns:impl="http://Servizi.Crm.APWebServices" xmlns:tns3="http://Tabelle.Crm.APClassi" xmlns:tns2="http://Tabelle.APClassi" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns12="http://Reclami.Crm.APClassi" xmlns:tns4="http://Anagrafiche.Crm.APClassi" xmlns:tns10="http://Documenti.Crm.APClassi" xmlns:tns11="http://DettagliOperativi.Crm.APClassi" xmlns:tns8="http://Main.Classi.siap.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:tns1="http://Strutture.WebServices.siap.com" xmlns:tns6="http://Strutture.Anagrafiche.APWebServices" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns5="http://Strutture.Crm.APWebServices" xmlns:tns9="http://Azioni.Crm.APClassi" xmlns:intf="http://Servizi.Crm.APWebServices" targetNamespace="http://Servizi.Crm.APWebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.WebServices.siap.com">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
-      <xsd:import namespace="http://Documenti.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
       <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
@@ -28,14 +29,15 @@
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Tabelle.APClassi">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
-      <xsd:import namespace="http://Reclami.Crm.APClassi" />
       <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
@@ -54,14 +56,15 @@
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Servizi.Crm.APWebServices">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
-      <xsd:import namespace="http://Documenti.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
@@ -91,6 +94,13 @@
         <xsd:complexContent mixed="false">
           <xsd:restriction base="soapenc:Array">
             <xsd:attribute wsdl:arrayType="tns3:StructConvenzione[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns9_StructAnaPrivacy">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns6:StructAnaPrivacy[]" ref="soapenc:arrayType" />
           </xsd:restriction>
         </xsd:complexContent>
       </xsd:complexType>
@@ -132,7 +142,7 @@
       <xsd:complexType name="ArrayOf_tns8_StructCrmAzione">
         <xsd:complexContent mixed="false">
           <xsd:restriction base="soapenc:Array">
-            <xsd:attribute wsdl:arrayType="tns8:StructCrmAzione[]" ref="soapenc:arrayType" />
+            <xsd:attribute wsdl:arrayType="tns9:StructCrmAzione[]" ref="soapenc:arrayType" />
           </xsd:restriction>
         </xsd:complexContent>
       </xsd:complexType>
@@ -146,21 +156,21 @@
       <xsd:complexType name="ArrayOf_tns9_StructCrmAnaDocMult">
         <xsd:complexContent mixed="false">
           <xsd:restriction base="soapenc:Array">
-            <xsd:attribute wsdl:arrayType="tns9:StructCrmAnaDocMult[]" ref="soapenc:arrayType" />
+            <xsd:attribute wsdl:arrayType="tns10:StructCrmAnaDocMult[]" ref="soapenc:arrayType" />
           </xsd:restriction>
         </xsd:complexContent>
       </xsd:complexType>
       <xsd:complexType name="ArrayOf_tns9_StructCrmAnaMovimentoPunti">
         <xsd:complexContent mixed="false">
           <xsd:restriction base="soapenc:Array">
-            <xsd:attribute wsdl:arrayType="tns9:StructCrmAnaMovimentoPunti[]" ref="soapenc:arrayType" />
+            <xsd:attribute wsdl:arrayType="tns10:StructCrmAnaMovimentoPunti[]" ref="soapenc:arrayType" />
           </xsd:restriction>
         </xsd:complexContent>
       </xsd:complexType>
       <xsd:complexType name="ArrayOf_tns9_StructCrmAnaDocPers">
         <xsd:complexContent mixed="false">
           <xsd:restriction base="soapenc:Array">
-            <xsd:attribute wsdl:arrayType="tns9:StructCrmAnaDocPers[]" ref="soapenc:arrayType" />
+            <xsd:attribute wsdl:arrayType="tns10:StructCrmAnaDocPers[]" ref="soapenc:arrayType" />
           </xsd:restriction>
         </xsd:complexContent>
       </xsd:complexType>
@@ -216,35 +226,36 @@
       <xsd:complexType name="ArrayOf_tns10_StructCrmServizioDettOperativi">
         <xsd:complexContent mixed="false">
           <xsd:restriction base="soapenc:Array">
-            <xsd:attribute wsdl:arrayType="tns10:StructCrmServizioDettOperativi[]" ref="soapenc:arrayType" />
+            <xsd:attribute wsdl:arrayType="tns11:StructCrmServizioDettOperativi[]" ref="soapenc:arrayType" />
           </xsd:restriction>
         </xsd:complexContent>
       </xsd:complexType>
       <xsd:complexType name="ArrayOf_tns11_StructCrmAnaReclamoAllegato">
         <xsd:complexContent mixed="false">
           <xsd:restriction base="soapenc:Array">
-            <xsd:attribute wsdl:arrayType="tns11:StructCrmAnaReclamoAllegato[]" ref="soapenc:arrayType" />
+            <xsd:attribute wsdl:arrayType="tns12:StructCrmAnaReclamoAllegato[]" ref="soapenc:arrayType" />
           </xsd:restriction>
         </xsd:complexContent>
       </xsd:complexType>
       <xsd:complexType name="ArrayOf_tns11_StructCrmAnaReclamo">
         <xsd:complexContent mixed="false">
           <xsd:restriction base="soapenc:Array">
-            <xsd:attribute wsdl:arrayType="tns11:StructCrmAnaReclamo[]" ref="soapenc:arrayType" />
+            <xsd:attribute wsdl:arrayType="tns12:StructCrmAnaReclamo[]" ref="soapenc:arrayType" />
           </xsd:restriction>
         </xsd:complexContent>
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Tabelle.Crm.APClassi">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
-      <xsd:import namespace="http://Documenti.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
       <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
@@ -310,14 +321,15 @@
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Anagrafiche.Crm.APClassi">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
-      <xsd:import namespace="http://Documenti.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
@@ -359,17 +371,13 @@
               <xsd:element name="codStatoOperativo" nillable="true" type="xsd:string" />
               <xsd:element name="codTitolo" nillable="true" type="xsd:string" />
               <xsd:element name="codTitoloStudio" nillable="true" type="xsd:string" />
-              <xsd:element name="consensoPrivacyElettronicaEmail" nillable="true" type="xsd:string" />
-              <xsd:element name="consensoPrivacyMateriale" nillable="true" type="xsd:string" />
-              <xsd:element name="consensoPrivacySensibiliTerzi" nillable="true" type="xsd:string" />
-              <xsd:element name="consensoPrivacyServizi" nillable="true" type="xsd:string" />
-              <xsd:element name="consensoPrivacyTerzi" nillable="true" type="xsd:string" />
               <xsd:element name="dataNascita" nillable="true" type="xsd:string" />
               <xsd:element name="informazioniAggiuntive" nillable="true" type="xsd:string" />
               <xsd:element name="luogoNascita" nillable="true" type="xsd:string" />
               <xsd:element name="personaFisica" nillable="true" type="xsd:string" />
               <xsd:element name="sottoCatMerceol" nillable="true" type="xsd:string" />
               <xsd:element name="statoCivile" nillable="true" type="xsd:string" />
+              <xsd:element name="structAnaPrivacy" nillable="true" type="intf:ArrayOf_tns9_StructAnaPrivacy" />
               <xsd:element name="unitaOperativa" nillable="true" type="xsd:string" />
             </xsd:sequence>
           </xsd:extension>
@@ -382,7 +390,7 @@
       </xsd:complexType>
       <xsd:complexType name="StructCrmAnaGiocata">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns6:AWCMANAG">
+          <xsd:extension base="tns7:AWCMANAG">
             <xsd:sequence>
               <xsd:element name="codPremio" nillable="true" type="xsd:string" />
               <xsd:element name="data" nillable="true" type="xsd:string" />
@@ -502,14 +510,15 @@
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.Crm.APWebServices">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
-      <xsd:import namespace="http://Documenti.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
@@ -777,14 +786,14 @@
       </xsd:complexType>
       <xsd:complexType name="StructAnaDettagliOperativiOut">
         <xsd:sequence>
-          <xsd:element name="anaDettOperativi" nillable="true" type="tns10:StructCrmAnaDettOperativi" />
+          <xsd:element name="anaDettOperativi" nillable="true" type="tns11:StructCrmAnaDettOperativi" />
           <xsd:element name="anaGeneraleRidotta" nillable="true" type="tns4:StructCrmAnaGeneraleRidotta" />
           <xsd:element name="esito" nillable="true" type="tns1:StructEsito" />
         </xsd:sequence>
       </xsd:complexType>
       <xsd:complexType name="StructAnaDettagliOperativi">
         <xsd:sequence>
-          <xsd:element name="crmAnaDettOperativi" nillable="true" type="tns10:StructCrmAnaDettOperativi" />
+          <xsd:element name="crmAnaDettOperativi" nillable="true" type="tns11:StructCrmAnaDettOperativi" />
           <xsd:element name="keyAnaContatto" nillable="true" type="tns5:StructKeyAnaContatto" />
         </xsd:sequence>
       </xsd:complexType>
@@ -827,16 +836,42 @@
         </xsd:sequence>
       </xsd:complexType>
     </xsd:schema>
-    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Main.Classi.siap.com">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Strutture.Anagrafiche.APWebServices">
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
+      <xsd:import namespace="http://Tabelle.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.WebServices.siap.com" />
+      <xsd:import namespace="http://Main.Classi.siap.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="StructAnaPrivacy">
+        <xsd:sequence>
+          <xsd:element name="dataConsensoPrivacy" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizionePrivacy" nillable="true" type="xsd:string" />
+          <xsd:element name="idProgrPrivacy" type="xsd:int" />
+          <xsd:element name="oraConsensoPrivacy" nillable="true" type="xsd:string" />
+          <xsd:element name="titoloPrivacy" nillable="true" type="xsd:string" />
+          <xsd:element name="valoreFlagPrivacy" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Main.Classi.siap.com">
+      <xsd:import namespace="http://Strutture.Crm.APWebServices" />
+      <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
+      <xsd:import namespace="http://Servizi.Crm.APWebServices" />
+      <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Azioni.Crm.APClassi" />
       <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
+      <xsd:import namespace="http://Reclami.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
@@ -850,58 +885,60 @@
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
-      <xsd:import namespace="http://Documenti.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
       <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
       <xsd:complexType name="AWCMANAG">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns7:SiapCommonClass">
+          <xsd:extension base="tns8:SiapCommonClass">
             <xsd:sequence />
           </xsd:extension>
         </xsd:complexContent>
       </xsd:complexType>
       <xsd:complexType name="AWCMANAM">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns7:SiapCommonClass">
+          <xsd:extension base="tns8:SiapCommonClass">
             <xsd:sequence />
           </xsd:extension>
         </xsd:complexContent>
       </xsd:complexType>
       <xsd:complexType name="AWCMANVS">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns7:SiapCommonClass">
+          <xsd:extension base="tns8:SiapCommonClass">
             <xsd:sequence />
           </xsd:extension>
         </xsd:complexContent>
       </xsd:complexType>
       <xsd:complexType name="AWCMANAV">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns7:SiapCommonClass">
+          <xsd:extension base="tns8:SiapCommonClass">
             <xsd:sequence />
           </xsd:extension>
         </xsd:complexContent>
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Azioni.Crm.APClassi">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
-      <xsd:import namespace="http://Documenti.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
       <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
       <xsd:complexType name="StructCrmAzione">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns7:SiapCommonClass">
+          <xsd:extension base="tns8:SiapCommonClass">
             <xsd:sequence>
               <xsd:element name="codGruOpeNotificaAzEseguita" nillable="true" type="xsd:string" />
               <xsd:element name="codGruOpeNotificaAzSuccessiva" nillable="true" type="xsd:string" />
@@ -945,12 +982,13 @@
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Documenti.Crm.APClassi">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
@@ -959,7 +997,7 @@
       <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
       <xsd:complexType name="StructCrmAnaDocMult">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns6:AWCMANAM">
+          <xsd:extension base="tns7:AWCMANAM">
             <xsd:sequence>
               <xsd:element name="descrizione" nillable="true" type="xsd:string" />
               <xsd:element name="file" nillable="true" type="xsd:base64Binary" />
@@ -972,7 +1010,7 @@
       </xsd:complexType>
       <xsd:complexType name="StructCrmAnaMovimentoPunti">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns7:SiapCommonClass">
+          <xsd:extension base="tns8:SiapCommonClass">
             <xsd:sequence>
               <xsd:element name="codCausale" nillable="true" type="xsd:string" />
               <xsd:element name="noteInterne" nillable="true" type="xsd:string" />
@@ -985,7 +1023,7 @@
       </xsd:complexType>
       <xsd:complexType name="StructCrmAnaDocPers">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns7:SiapCommonClass">
+          <xsd:extension base="tns8:SiapCommonClass">
             <xsd:sequence>
               <xsd:element name="VMovimenti" nillable="true" type="intf:ArrayOf_tns9_StructCrmAnaMovimentoPunti" />
               <xsd:element name="altriDati" nillable="true" type="xsd:string" />
@@ -1005,21 +1043,22 @@
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://DettagliOperativi.Crm.APClassi">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
+      <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
       <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Reclami.Crm.APClassi" />
-      <xsd:import namespace="http://Documenti.Crm.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />
       <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
       <xsd:complexType name="StructCrmServizioDettOperativi">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns6:AWCMANVS">
+          <xsd:extension base="tns7:AWCMANVS">
             <xsd:sequence>
               <xsd:element name="checked" nillable="true" type="xsd:string" />
               <xsd:element name="codice" nillable="true" type="xsd:string" />
@@ -1030,7 +1069,7 @@
       </xsd:complexType>
       <xsd:complexType name="StructCrmTestataDettOperativi">
         <xsd:complexContent mixed="false">
-          <xsd:extension base="tns6:AWCMANAV">
+          <xsd:extension base="tns7:AWCMANAV">
             <xsd:sequence>
               <xsd:element name="accountManagerRiferimento" nillable="true" type="tns4:StructCrmAnaReferenti" />
               <xsd:element name="codTeamLavoro" nillable="true" type="xsd:string" />
@@ -1048,19 +1087,20 @@
         <xsd:sequence>
           <xsd:element name="VCrmAnaDocMult" nillable="true" type="intf:ArrayOf_tns9_StructCrmAnaDocMult" />
           <xsd:element name="VCrmServiziDettOperativi" nillable="true" type="intf:ArrayOf_tns10_StructCrmServizioDettOperativi" />
-          <xsd:element name="structCrmTestataDettOperativi" nillable="true" type="tns10:StructCrmTestataDettOperativi" />
+          <xsd:element name="structCrmTestataDettOperativi" nillable="true" type="tns11:StructCrmTestataDettOperativi" />
         </xsd:sequence>
       </xsd:complexType>
     </xsd:schema>
     <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://Reclami.Crm.APClassi">
-      <xsd:import namespace="http://TipiRecord.APClassi" />
       <xsd:import namespace="http://Strutture.Crm.APWebServices" />
       <xsd:import namespace="http://DettagliOperativi.Crm.APClassi" />
       <xsd:import namespace="http://Servizi.Crm.APWebServices" />
       <xsd:import namespace="http://Anagrafiche.Crm.APClassi" />
       <xsd:import namespace="http://Azioni.Crm.APClassi" />
-      <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Documenti.Crm.APClassi" />
+      <xsd:import namespace="http://TipiRecord.APClassi" />
+      <xsd:import namespace="http://Strutture.Anagrafiche.APWebServices" />
+      <xsd:import namespace="http://Tabelle.APClassi" />
       <xsd:import namespace="http://Tabelle.Crm.APClassi" />
       <xsd:import namespace="http://Strutture.WebServices.siap.com" />
       <xsd:import namespace="http://Main.Classi.siap.com" />

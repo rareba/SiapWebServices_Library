@@ -29,6 +29,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -55,6 +56,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -81,6 +83,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -107,6 +110,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -133,6 +137,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -159,6 +164,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -185,6 +191,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -211,6 +218,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -237,6 +245,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -263,6 +272,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -289,6 +299,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -315,6 +326,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -341,6 +353,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -367,6 +380,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -393,6 +407,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -419,6 +434,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -445,6 +461,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -471,6 +488,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -497,6 +515,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -523,6 +542,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -549,6 +569,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -575,6 +596,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -601,6 +623,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -627,6 +650,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -653,6 +677,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -679,6 +704,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -705,6 +731,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -731,6 +758,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(SiapCommonClass))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructSottoscrizioni))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructCrmAnaClienti))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructAnaPrivacy))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructRisultatoRicercaAnaOut))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructConvenzione))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(StructPreferenze))]
@@ -745,7 +773,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -791,7 +819,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -878,7 +906,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -980,7 +1008,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1001,16 +1029,6 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         
         private string codTitoloStudioField;
         
-        private string consensoPrivacyElettronicaEmailField;
-        
-        private string consensoPrivacyMaterialeField;
-        
-        private string consensoPrivacySensibiliTerziField;
-        
-        private string consensoPrivacyServiziField;
-        
-        private string consensoPrivacyTerziField;
-        
         private string dataNascitaField;
         
         private string informazioniAggiuntiveField;
@@ -1022,6 +1040,8 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         private string sottoCatMerceolField;
         
         private string statoCivileField;
+        
+        private StructAnaPrivacy[] structAnaPrivacyField;
         
         private string unitaOperativaField;
         
@@ -1111,66 +1131,6 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         
         /// <remarks/>
         [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string consensoPrivacyElettronicaEmail {
-            get {
-                return this.consensoPrivacyElettronicaEmailField;
-            }
-            set {
-                this.consensoPrivacyElettronicaEmailField = value;
-                this.RaisePropertyChanged("consensoPrivacyElettronicaEmail");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string consensoPrivacyMateriale {
-            get {
-                return this.consensoPrivacyMaterialeField;
-            }
-            set {
-                this.consensoPrivacyMaterialeField = value;
-                this.RaisePropertyChanged("consensoPrivacyMateriale");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string consensoPrivacySensibiliTerzi {
-            get {
-                return this.consensoPrivacySensibiliTerziField;
-            }
-            set {
-                this.consensoPrivacySensibiliTerziField = value;
-                this.RaisePropertyChanged("consensoPrivacySensibiliTerzi");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string consensoPrivacyServizi {
-            get {
-                return this.consensoPrivacyServiziField;
-            }
-            set {
-                this.consensoPrivacyServiziField = value;
-                this.RaisePropertyChanged("consensoPrivacyServizi");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string consensoPrivacyTerzi {
-            get {
-                return this.consensoPrivacyTerziField;
-            }
-            set {
-                this.consensoPrivacyTerziField = value;
-                this.RaisePropertyChanged("consensoPrivacyTerzi");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
         public string dataNascita {
             get {
                 return this.dataNascitaField;
@@ -1243,6 +1203,18 @@ namespace SiapWebServices_Library.WebServicesCRMService {
         
         /// <remarks/>
         [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public StructAnaPrivacy[] structAnaPrivacy {
+            get {
+                return this.structAnaPrivacyField;
+            }
+            set {
+                this.structAnaPrivacyField = value;
+                this.RaisePropertyChanged("structAnaPrivacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
         public string unitaOperativa {
             get {
                 return this.unitaOperativaField;
@@ -1255,8 +1227,109 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Strutture.Anagrafiche.APWebServices")]
+    public partial class StructAnaPrivacy : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string dataConsensoPrivacyField;
+        
+        private string descrizionePrivacyField;
+        
+        private int idProgrPrivacyField;
+        
+        private string oraConsensoPrivacyField;
+        
+        private string titoloPrivacyField;
+        
+        private string valoreFlagPrivacyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string dataConsensoPrivacy {
+            get {
+                return this.dataConsensoPrivacyField;
+            }
+            set {
+                this.dataConsensoPrivacyField = value;
+                this.RaisePropertyChanged("dataConsensoPrivacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string descrizionePrivacy {
+            get {
+                return this.descrizionePrivacyField;
+            }
+            set {
+                this.descrizionePrivacyField = value;
+                this.RaisePropertyChanged("descrizionePrivacy");
+            }
+        }
+        
+        /// <remarks/>
+        public int idProgrPrivacy {
+            get {
+                return this.idProgrPrivacyField;
+            }
+            set {
+                this.idProgrPrivacyField = value;
+                this.RaisePropertyChanged("idProgrPrivacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string oraConsensoPrivacy {
+            get {
+                return this.oraConsensoPrivacyField;
+            }
+            set {
+                this.oraConsensoPrivacyField = value;
+                this.RaisePropertyChanged("oraConsensoPrivacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string titoloPrivacy {
+            get {
+                return this.titoloPrivacyField;
+            }
+            set {
+                this.titoloPrivacyField = value;
+                this.RaisePropertyChanged("titoloPrivacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string valoreFlagPrivacy {
+            get {
+                return this.valoreFlagPrivacyField;
+            }
+            set {
+                this.valoreFlagPrivacyField = value;
+                this.RaisePropertyChanged("valoreFlagPrivacy");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaGenerale))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1498,7 +1571,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1572,7 +1645,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1618,7 +1691,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1650,7 +1723,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1724,7 +1797,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1831,7 +1904,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     
     /// <remarks/>
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaGiocata))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1840,7 +1913,8 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAzione))]
+    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaDocPers))]
+    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaMovimentoPunti))]
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(AWCMANAV))]
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmTestataDettOperativi))]
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(AWCMANVS))]
@@ -1849,9 +1923,8 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaDocMult))]
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(AWCMANAG))]
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaGiocata))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaDocPers))]
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaMovimentoPunti))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAzione))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1869,7 +1942,966 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Documenti.Crm.APClassi")]
+    public partial class StructCrmAnaDocPers : SiapCommonClass {
+        
+        private StructCrmAnaMovimentoPunti[] vMovimentiField;
+        
+        private string altriDatiField;
+        
+        private string codCittadinanzaField;
+        
+        private string codStatoOperativoField;
+        
+        private string dataRilascioField;
+        
+        private string dataRinnovoField;
+        
+        private string dataScadenzaField;
+        
+        private string enteRilascioField;
+        
+        private string numeroField;
+        
+        private int progreField;
+        
+        private string statoField;
+        
+        private string tipoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public StructCrmAnaMovimentoPunti[] VMovimenti {
+            get {
+                return this.vMovimentiField;
+            }
+            set {
+                this.vMovimentiField = value;
+                this.RaisePropertyChanged("VMovimenti");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string altriDati {
+            get {
+                return this.altriDatiField;
+            }
+            set {
+                this.altriDatiField = value;
+                this.RaisePropertyChanged("altriDati");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codCittadinanza {
+            get {
+                return this.codCittadinanzaField;
+            }
+            set {
+                this.codCittadinanzaField = value;
+                this.RaisePropertyChanged("codCittadinanza");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codStatoOperativo {
+            get {
+                return this.codStatoOperativoField;
+            }
+            set {
+                this.codStatoOperativoField = value;
+                this.RaisePropertyChanged("codStatoOperativo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string dataRilascio {
+            get {
+                return this.dataRilascioField;
+            }
+            set {
+                this.dataRilascioField = value;
+                this.RaisePropertyChanged("dataRilascio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string dataRinnovo {
+            get {
+                return this.dataRinnovoField;
+            }
+            set {
+                this.dataRinnovoField = value;
+                this.RaisePropertyChanged("dataRinnovo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string dataScadenza {
+            get {
+                return this.dataScadenzaField;
+            }
+            set {
+                this.dataScadenzaField = value;
+                this.RaisePropertyChanged("dataScadenza");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string enteRilascio {
+            get {
+                return this.enteRilascioField;
+            }
+            set {
+                this.enteRilascioField = value;
+                this.RaisePropertyChanged("enteRilascio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string numero {
+            get {
+                return this.numeroField;
+            }
+            set {
+                this.numeroField = value;
+                this.RaisePropertyChanged("numero");
+            }
+        }
+        
+        /// <remarks/>
+        public int progre {
+            get {
+                return this.progreField;
+            }
+            set {
+                this.progreField = value;
+                this.RaisePropertyChanged("progre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string stato {
+            get {
+                return this.statoField;
+            }
+            set {
+                this.statoField = value;
+                this.RaisePropertyChanged("stato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Documenti.Crm.APClassi")]
+    public partial class StructCrmAnaMovimentoPunti : SiapCommonClass {
+        
+        private string codCausaleField;
+        
+        private string noteInterneField;
+        
+        private int progreField;
+        
+        private int puntiField;
+        
+        private string statoRecordField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codCausale {
+            get {
+                return this.codCausaleField;
+            }
+            set {
+                this.codCausaleField = value;
+                this.RaisePropertyChanged("codCausale");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string noteInterne {
+            get {
+                return this.noteInterneField;
+            }
+            set {
+                this.noteInterneField = value;
+                this.RaisePropertyChanged("noteInterne");
+            }
+        }
+        
+        /// <remarks/>
+        public int progre {
+            get {
+                return this.progreField;
+            }
+            set {
+                this.progreField = value;
+                this.RaisePropertyChanged("progre");
+            }
+        }
+        
+        /// <remarks/>
+        public int punti {
+            get {
+                return this.puntiField;
+            }
+            set {
+                this.puntiField = value;
+                this.RaisePropertyChanged("punti");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string statoRecord {
+            get {
+                return this.statoRecordField;
+            }
+            set {
+                this.statoRecordField = value;
+                this.RaisePropertyChanged("statoRecord");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmTestataDettOperativi))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://TipiRecord.APClassi")]
+    public partial class AWCMANAV : SiapCommonClass {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://DettagliOperativi.Crm.APClassi")]
+    public partial class StructCrmTestataDettOperativi : AWCMANAV {
+        
+        private StructCrmAnaReferenti accountManagerRiferimentoField;
+        
+        private string codTeamLavoroField;
+        
+        private string dataGoLiveField;
+        
+        private string emailDedicatoField;
+        
+        private string faxAssegnatoField;
+        
+        private string flagGlobalAccountManagerField;
+        
+        private StructCrmAnaReferenti salesManagerRiferimentoField;
+        
+        private string telefonoDedicatoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public StructCrmAnaReferenti accountManagerRiferimento {
+            get {
+                return this.accountManagerRiferimentoField;
+            }
+            set {
+                this.accountManagerRiferimentoField = value;
+                this.RaisePropertyChanged("accountManagerRiferimento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codTeamLavoro {
+            get {
+                return this.codTeamLavoroField;
+            }
+            set {
+                this.codTeamLavoroField = value;
+                this.RaisePropertyChanged("codTeamLavoro");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string dataGoLive {
+            get {
+                return this.dataGoLiveField;
+            }
+            set {
+                this.dataGoLiveField = value;
+                this.RaisePropertyChanged("dataGoLive");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string emailDedicato {
+            get {
+                return this.emailDedicatoField;
+            }
+            set {
+                this.emailDedicatoField = value;
+                this.RaisePropertyChanged("emailDedicato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string faxAssegnato {
+            get {
+                return this.faxAssegnatoField;
+            }
+            set {
+                this.faxAssegnatoField = value;
+                this.RaisePropertyChanged("faxAssegnato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string flagGlobalAccountManager {
+            get {
+                return this.flagGlobalAccountManagerField;
+            }
+            set {
+                this.flagGlobalAccountManagerField = value;
+                this.RaisePropertyChanged("flagGlobalAccountManager");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public StructCrmAnaReferenti salesManagerRiferimento {
+            get {
+                return this.salesManagerRiferimentoField;
+            }
+            set {
+                this.salesManagerRiferimentoField = value;
+                this.RaisePropertyChanged("salesManagerRiferimento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string telefonoDedicato {
+            get {
+                return this.telefonoDedicatoField;
+            }
+            set {
+                this.telefonoDedicatoField = value;
+                this.RaisePropertyChanged("telefonoDedicato");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Anagrafiche.Crm.APClassi")]
+    public partial class StructCrmAnaReferenti : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private StructCrmAnaRecapiti[] vRecapitiField;
+        
+        private string codIncaricoField;
+        
+        private string codMansioneAzField;
+        
+        private string codRepartoField;
+        
+        private string codTitoloPersonaField;
+        
+        private int idReferenteField;
+        
+        private string internoEsternoField;
+        
+        private string noteField;
+        
+        private string referenteField;
+        
+        private string statoRecordField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public StructCrmAnaRecapiti[] VRecapiti {
+            get {
+                return this.vRecapitiField;
+            }
+            set {
+                this.vRecapitiField = value;
+                this.RaisePropertyChanged("VRecapiti");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codIncarico {
+            get {
+                return this.codIncaricoField;
+            }
+            set {
+                this.codIncaricoField = value;
+                this.RaisePropertyChanged("codIncarico");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codMansioneAz {
+            get {
+                return this.codMansioneAzField;
+            }
+            set {
+                this.codMansioneAzField = value;
+                this.RaisePropertyChanged("codMansioneAz");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codReparto {
+            get {
+                return this.codRepartoField;
+            }
+            set {
+                this.codRepartoField = value;
+                this.RaisePropertyChanged("codReparto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codTitoloPersona {
+            get {
+                return this.codTitoloPersonaField;
+            }
+            set {
+                this.codTitoloPersonaField = value;
+                this.RaisePropertyChanged("codTitoloPersona");
+            }
+        }
+        
+        /// <remarks/>
+        public int idReferente {
+            get {
+                return this.idReferenteField;
+            }
+            set {
+                this.idReferenteField = value;
+                this.RaisePropertyChanged("idReferente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string internoEsterno {
+            get {
+                return this.internoEsternoField;
+            }
+            set {
+                this.internoEsternoField = value;
+                this.RaisePropertyChanged("internoEsterno");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string note {
+            get {
+                return this.noteField;
+            }
+            set {
+                this.noteField = value;
+                this.RaisePropertyChanged("note");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string referente {
+            get {
+                return this.referenteField;
+            }
+            set {
+                this.referenteField = value;
+                this.RaisePropertyChanged("referente");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string statoRecord {
+            get {
+                return this.statoRecordField;
+            }
+            set {
+                this.statoRecordField = value;
+                this.RaisePropertyChanged("statoRecord");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Anagrafiche.Crm.APClassi")]
+    public partial class StructCrmAnaRecapiti : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string capField;
+        
+        private string cittaField;
+        
+        private string codNazioneField;
+        
+        private string codProvinciaField;
+        
+        private string codRecapitoField;
+        
+        private string codStatoField;
+        
+        private string consensoContattoField;
+        
+        private string dataValiditaFiField;
+        
+        private string dataValiditaInField;
+        
+        private int idRecapitoField;
+        
+        private string indirizzoField;
+        
+        private int livelloAccessoField;
+        
+        private string noteField;
+        
+        private string oraFinaleField;
+        
+        private string oraInizialeField;
+        
+        private string statoRecordField;
+        
+        private string valoreField;
+        
+        private string visibilitaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string cap {
+            get {
+                return this.capField;
+            }
+            set {
+                this.capField = value;
+                this.RaisePropertyChanged("cap");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string citta {
+            get {
+                return this.cittaField;
+            }
+            set {
+                this.cittaField = value;
+                this.RaisePropertyChanged("citta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codNazione {
+            get {
+                return this.codNazioneField;
+            }
+            set {
+                this.codNazioneField = value;
+                this.RaisePropertyChanged("codNazione");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codProvincia {
+            get {
+                return this.codProvinciaField;
+            }
+            set {
+                this.codProvinciaField = value;
+                this.RaisePropertyChanged("codProvincia");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codRecapito {
+            get {
+                return this.codRecapitoField;
+            }
+            set {
+                this.codRecapitoField = value;
+                this.RaisePropertyChanged("codRecapito");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codStato {
+            get {
+                return this.codStatoField;
+            }
+            set {
+                this.codStatoField = value;
+                this.RaisePropertyChanged("codStato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string consensoContatto {
+            get {
+                return this.consensoContattoField;
+            }
+            set {
+                this.consensoContattoField = value;
+                this.RaisePropertyChanged("consensoContatto");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string dataValiditaFi {
+            get {
+                return this.dataValiditaFiField;
+            }
+            set {
+                this.dataValiditaFiField = value;
+                this.RaisePropertyChanged("dataValiditaFi");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string dataValiditaIn {
+            get {
+                return this.dataValiditaInField;
+            }
+            set {
+                this.dataValiditaInField = value;
+                this.RaisePropertyChanged("dataValiditaIn");
+            }
+        }
+        
+        /// <remarks/>
+        public int idRecapito {
+            get {
+                return this.idRecapitoField;
+            }
+            set {
+                this.idRecapitoField = value;
+                this.RaisePropertyChanged("idRecapito");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string indirizzo {
+            get {
+                return this.indirizzoField;
+            }
+            set {
+                this.indirizzoField = value;
+                this.RaisePropertyChanged("indirizzo");
+            }
+        }
+        
+        /// <remarks/>
+        public int livelloAccesso {
+            get {
+                return this.livelloAccessoField;
+            }
+            set {
+                this.livelloAccessoField = value;
+                this.RaisePropertyChanged("livelloAccesso");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string note {
+            get {
+                return this.noteField;
+            }
+            set {
+                this.noteField = value;
+                this.RaisePropertyChanged("note");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string oraFinale {
+            get {
+                return this.oraFinaleField;
+            }
+            set {
+                this.oraFinaleField = value;
+                this.RaisePropertyChanged("oraFinale");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string oraIniziale {
+            get {
+                return this.oraInizialeField;
+            }
+            set {
+                this.oraInizialeField = value;
+                this.RaisePropertyChanged("oraIniziale");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string statoRecord {
+            get {
+                return this.statoRecordField;
+            }
+            set {
+                this.statoRecordField = value;
+                this.RaisePropertyChanged("statoRecord");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string valore {
+            get {
+                return this.valoreField;
+            }
+            set {
+                this.valoreField = value;
+                this.RaisePropertyChanged("valore");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string visibilita {
+            get {
+                return this.visibilitaField;
+            }
+            set {
+                this.visibilitaField = value;
+                this.RaisePropertyChanged("visibilita");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmServizioDettOperativi))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://TipiRecord.APClassi")]
+    public partial class AWCMANVS : SiapCommonClass {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://DettagliOperativi.Crm.APClassi")]
+    public partial class StructCrmServizioDettOperativi : AWCMANVS {
+        
+        private string checkedField;
+        
+        private string codiceField;
+        
+        private string descrizioneField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string @checked {
+            get {
+                return this.checkedField;
+            }
+            set {
+                this.checkedField = value;
+                this.RaisePropertyChanged("checked");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string codice {
+            get {
+                return this.codiceField;
+            }
+            set {
+                this.codiceField = value;
+                this.RaisePropertyChanged("codice");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string descrizione {
+            get {
+                return this.descrizioneField;
+            }
+            set {
+                this.descrizioneField = value;
+                this.RaisePropertyChanged("descrizione");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaDocMult))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://TipiRecord.APClassi")]
+    public partial class AWCMANAM : SiapCommonClass {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Documenti.Crm.APClassi")]
+    public partial class StructCrmAnaDocMult : AWCMANAM {
+        
+        private string descrizioneField;
+        
+        private byte[] fileField;
+        
+        private string nomeField;
+        
+        private string statoField;
+        
+        private string tipoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string descrizione {
+            get {
+                return this.descrizioneField;
+            }
+            set {
+                this.descrizioneField = value;
+                this.RaisePropertyChanged("descrizione");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(DataType="base64Binary", IsNullable=true)]
+        public byte[] file {
+            get {
+                return this.fileField;
+            }
+            set {
+                this.fileField = value;
+                this.RaisePropertyChanged("file");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string nome {
+            get {
+                return this.nomeField;
+            }
+            set {
+                this.nomeField = value;
+                this.RaisePropertyChanged("nome");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string stato {
+            get {
+                return this.statoField;
+            }
+            set {
+                this.statoField = value;
+                this.RaisePropertyChanged("stato");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
+        public string tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+                this.RaisePropertyChanged("tipo");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2377,966 +3409,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmTestataDettOperativi))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://TipiRecord.APClassi")]
-    public partial class AWCMANAV : SiapCommonClass {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://DettagliOperativi.Crm.APClassi")]
-    public partial class StructCrmTestataDettOperativi : AWCMANAV {
-        
-        private StructCrmAnaReferenti accountManagerRiferimentoField;
-        
-        private string codTeamLavoroField;
-        
-        private string dataGoLiveField;
-        
-        private string emailDedicatoField;
-        
-        private string faxAssegnatoField;
-        
-        private string flagGlobalAccountManagerField;
-        
-        private StructCrmAnaReferenti salesManagerRiferimentoField;
-        
-        private string telefonoDedicatoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public StructCrmAnaReferenti accountManagerRiferimento {
-            get {
-                return this.accountManagerRiferimentoField;
-            }
-            set {
-                this.accountManagerRiferimentoField = value;
-                this.RaisePropertyChanged("accountManagerRiferimento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codTeamLavoro {
-            get {
-                return this.codTeamLavoroField;
-            }
-            set {
-                this.codTeamLavoroField = value;
-                this.RaisePropertyChanged("codTeamLavoro");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string dataGoLive {
-            get {
-                return this.dataGoLiveField;
-            }
-            set {
-                this.dataGoLiveField = value;
-                this.RaisePropertyChanged("dataGoLive");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string emailDedicato {
-            get {
-                return this.emailDedicatoField;
-            }
-            set {
-                this.emailDedicatoField = value;
-                this.RaisePropertyChanged("emailDedicato");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string faxAssegnato {
-            get {
-                return this.faxAssegnatoField;
-            }
-            set {
-                this.faxAssegnatoField = value;
-                this.RaisePropertyChanged("faxAssegnato");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string flagGlobalAccountManager {
-            get {
-                return this.flagGlobalAccountManagerField;
-            }
-            set {
-                this.flagGlobalAccountManagerField = value;
-                this.RaisePropertyChanged("flagGlobalAccountManager");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public StructCrmAnaReferenti salesManagerRiferimento {
-            get {
-                return this.salesManagerRiferimentoField;
-            }
-            set {
-                this.salesManagerRiferimentoField = value;
-                this.RaisePropertyChanged("salesManagerRiferimento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string telefonoDedicato {
-            get {
-                return this.telefonoDedicatoField;
-            }
-            set {
-                this.telefonoDedicatoField = value;
-                this.RaisePropertyChanged("telefonoDedicato");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Anagrafiche.Crm.APClassi")]
-    public partial class StructCrmAnaReferenti : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private StructCrmAnaRecapiti[] vRecapitiField;
-        
-        private string codIncaricoField;
-        
-        private string codMansioneAzField;
-        
-        private string codRepartoField;
-        
-        private string codTitoloPersonaField;
-        
-        private int idReferenteField;
-        
-        private string internoEsternoField;
-        
-        private string noteField;
-        
-        private string referenteField;
-        
-        private string statoRecordField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public StructCrmAnaRecapiti[] VRecapiti {
-            get {
-                return this.vRecapitiField;
-            }
-            set {
-                this.vRecapitiField = value;
-                this.RaisePropertyChanged("VRecapiti");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codIncarico {
-            get {
-                return this.codIncaricoField;
-            }
-            set {
-                this.codIncaricoField = value;
-                this.RaisePropertyChanged("codIncarico");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codMansioneAz {
-            get {
-                return this.codMansioneAzField;
-            }
-            set {
-                this.codMansioneAzField = value;
-                this.RaisePropertyChanged("codMansioneAz");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codReparto {
-            get {
-                return this.codRepartoField;
-            }
-            set {
-                this.codRepartoField = value;
-                this.RaisePropertyChanged("codReparto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codTitoloPersona {
-            get {
-                return this.codTitoloPersonaField;
-            }
-            set {
-                this.codTitoloPersonaField = value;
-                this.RaisePropertyChanged("codTitoloPersona");
-            }
-        }
-        
-        /// <remarks/>
-        public int idReferente {
-            get {
-                return this.idReferenteField;
-            }
-            set {
-                this.idReferenteField = value;
-                this.RaisePropertyChanged("idReferente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string internoEsterno {
-            get {
-                return this.internoEsternoField;
-            }
-            set {
-                this.internoEsternoField = value;
-                this.RaisePropertyChanged("internoEsterno");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string note {
-            get {
-                return this.noteField;
-            }
-            set {
-                this.noteField = value;
-                this.RaisePropertyChanged("note");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string referente {
-            get {
-                return this.referenteField;
-            }
-            set {
-                this.referenteField = value;
-                this.RaisePropertyChanged("referente");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string statoRecord {
-            get {
-                return this.statoRecordField;
-            }
-            set {
-                this.statoRecordField = value;
-                this.RaisePropertyChanged("statoRecord");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Anagrafiche.Crm.APClassi")]
-    public partial class StructCrmAnaRecapiti : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string capField;
-        
-        private string cittaField;
-        
-        private string codNazioneField;
-        
-        private string codProvinciaField;
-        
-        private string codRecapitoField;
-        
-        private string codStatoField;
-        
-        private string consensoContattoField;
-        
-        private string dataValiditaFiField;
-        
-        private string dataValiditaInField;
-        
-        private int idRecapitoField;
-        
-        private string indirizzoField;
-        
-        private int livelloAccessoField;
-        
-        private string noteField;
-        
-        private string oraFinaleField;
-        
-        private string oraInizialeField;
-        
-        private string statoRecordField;
-        
-        private string valoreField;
-        
-        private string visibilitaField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string cap {
-            get {
-                return this.capField;
-            }
-            set {
-                this.capField = value;
-                this.RaisePropertyChanged("cap");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string citta {
-            get {
-                return this.cittaField;
-            }
-            set {
-                this.cittaField = value;
-                this.RaisePropertyChanged("citta");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codNazione {
-            get {
-                return this.codNazioneField;
-            }
-            set {
-                this.codNazioneField = value;
-                this.RaisePropertyChanged("codNazione");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codProvincia {
-            get {
-                return this.codProvinciaField;
-            }
-            set {
-                this.codProvinciaField = value;
-                this.RaisePropertyChanged("codProvincia");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codRecapito {
-            get {
-                return this.codRecapitoField;
-            }
-            set {
-                this.codRecapitoField = value;
-                this.RaisePropertyChanged("codRecapito");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codStato {
-            get {
-                return this.codStatoField;
-            }
-            set {
-                this.codStatoField = value;
-                this.RaisePropertyChanged("codStato");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string consensoContatto {
-            get {
-                return this.consensoContattoField;
-            }
-            set {
-                this.consensoContattoField = value;
-                this.RaisePropertyChanged("consensoContatto");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string dataValiditaFi {
-            get {
-                return this.dataValiditaFiField;
-            }
-            set {
-                this.dataValiditaFiField = value;
-                this.RaisePropertyChanged("dataValiditaFi");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string dataValiditaIn {
-            get {
-                return this.dataValiditaInField;
-            }
-            set {
-                this.dataValiditaInField = value;
-                this.RaisePropertyChanged("dataValiditaIn");
-            }
-        }
-        
-        /// <remarks/>
-        public int idRecapito {
-            get {
-                return this.idRecapitoField;
-            }
-            set {
-                this.idRecapitoField = value;
-                this.RaisePropertyChanged("idRecapito");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string indirizzo {
-            get {
-                return this.indirizzoField;
-            }
-            set {
-                this.indirizzoField = value;
-                this.RaisePropertyChanged("indirizzo");
-            }
-        }
-        
-        /// <remarks/>
-        public int livelloAccesso {
-            get {
-                return this.livelloAccessoField;
-            }
-            set {
-                this.livelloAccessoField = value;
-                this.RaisePropertyChanged("livelloAccesso");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string note {
-            get {
-                return this.noteField;
-            }
-            set {
-                this.noteField = value;
-                this.RaisePropertyChanged("note");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string oraFinale {
-            get {
-                return this.oraFinaleField;
-            }
-            set {
-                this.oraFinaleField = value;
-                this.RaisePropertyChanged("oraFinale");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string oraIniziale {
-            get {
-                return this.oraInizialeField;
-            }
-            set {
-                this.oraInizialeField = value;
-                this.RaisePropertyChanged("oraIniziale");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string statoRecord {
-            get {
-                return this.statoRecordField;
-            }
-            set {
-                this.statoRecordField = value;
-                this.RaisePropertyChanged("statoRecord");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string valore {
-            get {
-                return this.valoreField;
-            }
-            set {
-                this.valoreField = value;
-                this.RaisePropertyChanged("valore");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string visibilita {
-            get {
-                return this.visibilitaField;
-            }
-            set {
-                this.visibilitaField = value;
-                this.RaisePropertyChanged("visibilita");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmServizioDettOperativi))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://TipiRecord.APClassi")]
-    public partial class AWCMANVS : SiapCommonClass {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://DettagliOperativi.Crm.APClassi")]
-    public partial class StructCrmServizioDettOperativi : AWCMANVS {
-        
-        private string checkedField;
-        
-        private string codiceField;
-        
-        private string descrizioneField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string @checked {
-            get {
-                return this.checkedField;
-            }
-            set {
-                this.checkedField = value;
-                this.RaisePropertyChanged("checked");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codice {
-            get {
-                return this.codiceField;
-            }
-            set {
-                this.codiceField = value;
-                this.RaisePropertyChanged("codice");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string descrizione {
-            get {
-                return this.descrizioneField;
-            }
-            set {
-                this.descrizioneField = value;
-                this.RaisePropertyChanged("descrizione");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructCrmAnaDocMult))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://TipiRecord.APClassi")]
-    public partial class AWCMANAM : SiapCommonClass {
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Documenti.Crm.APClassi")]
-    public partial class StructCrmAnaDocMult : AWCMANAM {
-        
-        private string descrizioneField;
-        
-        private byte[] fileField;
-        
-        private string nomeField;
-        
-        private string statoField;
-        
-        private string tipoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string descrizione {
-            get {
-                return this.descrizioneField;
-            }
-            set {
-                this.descrizioneField = value;
-                this.RaisePropertyChanged("descrizione");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(DataType="base64Binary", IsNullable=true)]
-        public byte[] file {
-            get {
-                return this.fileField;
-            }
-            set {
-                this.fileField = value;
-                this.RaisePropertyChanged("file");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string nome {
-            get {
-                return this.nomeField;
-            }
-            set {
-                this.nomeField = value;
-                this.RaisePropertyChanged("nome");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string stato {
-            get {
-                return this.statoField;
-            }
-            set {
-                this.statoField = value;
-                this.RaisePropertyChanged("stato");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Documenti.Crm.APClassi")]
-    public partial class StructCrmAnaDocPers : SiapCommonClass {
-        
-        private StructCrmAnaMovimentoPunti[] vMovimentiField;
-        
-        private string altriDatiField;
-        
-        private string codCittadinanzaField;
-        
-        private string codStatoOperativoField;
-        
-        private string dataRilascioField;
-        
-        private string dataRinnovoField;
-        
-        private string dataScadenzaField;
-        
-        private string enteRilascioField;
-        
-        private string numeroField;
-        
-        private int progreField;
-        
-        private string statoField;
-        
-        private string tipoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public StructCrmAnaMovimentoPunti[] VMovimenti {
-            get {
-                return this.vMovimentiField;
-            }
-            set {
-                this.vMovimentiField = value;
-                this.RaisePropertyChanged("VMovimenti");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string altriDati {
-            get {
-                return this.altriDatiField;
-            }
-            set {
-                this.altriDatiField = value;
-                this.RaisePropertyChanged("altriDati");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codCittadinanza {
-            get {
-                return this.codCittadinanzaField;
-            }
-            set {
-                this.codCittadinanzaField = value;
-                this.RaisePropertyChanged("codCittadinanza");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codStatoOperativo {
-            get {
-                return this.codStatoOperativoField;
-            }
-            set {
-                this.codStatoOperativoField = value;
-                this.RaisePropertyChanged("codStatoOperativo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string dataRilascio {
-            get {
-                return this.dataRilascioField;
-            }
-            set {
-                this.dataRilascioField = value;
-                this.RaisePropertyChanged("dataRilascio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string dataRinnovo {
-            get {
-                return this.dataRinnovoField;
-            }
-            set {
-                this.dataRinnovoField = value;
-                this.RaisePropertyChanged("dataRinnovo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string dataScadenza {
-            get {
-                return this.dataScadenzaField;
-            }
-            set {
-                this.dataScadenzaField = value;
-                this.RaisePropertyChanged("dataScadenza");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string enteRilascio {
-            get {
-                return this.enteRilascioField;
-            }
-            set {
-                this.enteRilascioField = value;
-                this.RaisePropertyChanged("enteRilascio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string numero {
-            get {
-                return this.numeroField;
-            }
-            set {
-                this.numeroField = value;
-                this.RaisePropertyChanged("numero");
-            }
-        }
-        
-        /// <remarks/>
-        public int progre {
-            get {
-                return this.progreField;
-            }
-            set {
-                this.progreField = value;
-                this.RaisePropertyChanged("progre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string stato {
-            get {
-                return this.statoField;
-            }
-            set {
-                this.statoField = value;
-                this.RaisePropertyChanged("stato");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string tipo {
-            get {
-                return this.tipoField;
-            }
-            set {
-                this.tipoField = value;
-                this.RaisePropertyChanged("tipo");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.SoapTypeAttribute(Namespace="http://Documenti.Crm.APClassi")]
-    public partial class StructCrmAnaMovimentoPunti : SiapCommonClass {
-        
-        private string codCausaleField;
-        
-        private string noteInterneField;
-        
-        private int progreField;
-        
-        private int puntiField;
-        
-        private string statoRecordField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string codCausale {
-            get {
-                return this.codCausaleField;
-            }
-            set {
-                this.codCausaleField = value;
-                this.RaisePropertyChanged("codCausale");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string noteInterne {
-            get {
-                return this.noteInterneField;
-            }
-            set {
-                this.noteInterneField = value;
-                this.RaisePropertyChanged("noteInterne");
-            }
-        }
-        
-        /// <remarks/>
-        public int progre {
-            get {
-                return this.progreField;
-            }
-            set {
-                this.progreField = value;
-                this.RaisePropertyChanged("progre");
-            }
-        }
-        
-        /// <remarks/>
-        public int punti {
-            get {
-                return this.puntiField;
-            }
-            set {
-                this.puntiField = value;
-                this.RaisePropertyChanged("punti");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.SoapElementAttribute(IsNullable=true)]
-        public string statoRecord {
-            get {
-                return this.statoRecordField;
-            }
-            set {
-                this.statoRecordField = value;
-                this.RaisePropertyChanged("statoRecord");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3368,7 +3441,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3428,7 +3501,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3753,7 +3826,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3799,7 +3872,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3872,7 +3945,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3930,7 +4003,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3988,7 +4061,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4034,7 +4107,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4079,7 +4152,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4181,7 +4254,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4227,7 +4300,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4273,7 +4346,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4333,7 +4406,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4393,7 +4466,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4425,7 +4498,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4484,7 +4557,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4656,7 +4729,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4771,7 +4844,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4831,7 +4904,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4877,7 +4950,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5189,7 +5262,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5387,7 +5460,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5447,7 +5520,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5500,7 +5573,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     /// <remarks/>
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructInfoPrvCommessaTL))]
     [System.Xml.Serialization.SoapIncludeAttribute(typeof(StructInfoPrvCommessa))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5602,7 +5675,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5693,7 +5766,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5781,7 +5854,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5812,7 +5885,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5858,7 +5931,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5918,7 +5991,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6048,7 +6121,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6108,7 +6181,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6140,7 +6213,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6186,7 +6259,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6232,7 +6305,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6291,7 +6364,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6505,7 +6578,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6537,7 +6610,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6583,7 +6656,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6643,7 +6716,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6703,7 +6776,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6749,7 +6822,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6781,7 +6854,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6910,7 +6983,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -6969,7 +7042,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7028,7 +7101,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7422,7 +7495,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7510,7 +7583,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7556,7 +7629,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7602,7 +7675,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -7648,7 +7721,7 @@ namespace SiapWebServices_Library.WebServicesCRMService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
